@@ -1,0 +1,280 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 45;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		259611D7177625F700CEFE0E /* gameModel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 259611D6177625F700CEFE0E /* gameModel.cpp */; };
+		259611F917763CAC00CEFE0E /* gameView.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 259611F817763CAC00CEFE0E /* gameView.cpp */; };
+		2596124217764ABC00CEFE0E /* TokenTypeVO.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2596124117764ABC00CEFE0E /* TokenTypeVO.cpp */; };
+		2596124617764B1500CEFE0E /* tileSpaceVO.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2596124517764B1500CEFE0E /* tileSpaceVO.cpp */; };
+		259612901776837E00CEFE0E /* gameController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2596128F1776837E00CEFE0E /* gameController.cpp */; };
+		2596129717769FA300CEFE0E /* Player.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2596129617769FA300CEFE0E /* Player.cpp */; };
+		8DD76F650486A84900D96B5E /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 08FB7796FE84155DC02AAC07 /* main.cpp */; settings = {ATTRIBUTES = (); }; };
+		8DD76F6A0486A84900D96B5E /* swapStratCpp.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = C6859E8B029090EE04C91782 /* swapStratCpp.1 */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		8DD76F690486A84900D96B5E /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 8;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+				8DD76F6A0486A84900D96B5E /* swapStratCpp.1 in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		08FB7796FE84155DC02AAC07 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		259611D5177625F700CEFE0E /* gameModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gameModel.h; sourceTree = "<group>"; };
+		259611D6177625F700CEFE0E /* gameModel.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = gameModel.cpp; sourceTree = "<group>"; };
+		259611F717763CAC00CEFE0E /* gameView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gameView.h; sourceTree = "<group>"; };
+		259611F817763CAC00CEFE0E /* gameView.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = gameView.cpp; sourceTree = "<group>"; };
+		2596120217763FAB00CEFE0E /* gameDataTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gameDataTypes.h; sourceTree = "<group>"; };
+		2596124117764ABC00CEFE0E /* TokenTypeVO.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TokenTypeVO.cpp; sourceTree = "<group>"; };
+		2596124317764AF300CEFE0E /* TokenTypeVO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TokenTypeVO.h; sourceTree = "<group>"; };
+		2596124517764B1500CEFE0E /* tileSpaceVO.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = tileSpaceVO.cpp; sourceTree = "<group>"; };
+		2596124717764B3000CEFE0E /* tileSpaceVO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tileSpaceVO.h; sourceTree = "<group>"; };
+		2596128E1776837E00CEFE0E /* gameController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gameController.h; sourceTree = "<group>"; };
+		2596128F1776837E00CEFE0E /* gameController.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = gameController.cpp; sourceTree = "<group>"; };
+		2596129517769FA300CEFE0E /* Player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Player.h; sourceTree = "<group>"; };
+		2596129617769FA300CEFE0E /* Player.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Player.cpp; sourceTree = "<group>"; };
+		8DD76F6C0486A84900D96B5E /* swapStratCpp */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = swapStratCpp; sourceTree = BUILT_PRODUCTS_DIR; };
+		C6859E8B029090EE04C91782 /* swapStratCpp.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = swapStratCpp.1; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8DD76F660486A84900D96B5E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		08FB7794FE84155DC02AAC07 /* swapStratCpp */ = {
+			isa = PBXGroup;
+			children = (
+				08FB7795FE84155DC02AAC07 /* Source */,
+				C6859E8C029090F304C91782 /* Documentation */,
+				1AB674ADFE9D54B511CA2CBB /* Products */,
+			);
+			name = swapStratCpp;
+			sourceTree = "<group>";
+		};
+		08FB7795FE84155DC02AAC07 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				2596128D1776835B00CEFE0E /* gameController */,
+				2596121A1776453200CEFE0E /* gameView */,
+				259612191776452600CEFE0E /* gameModel */,
+				08FB7796FE84155DC02AAC07 /* main.cpp */,
+				2596120217763FAB00CEFE0E /* gameDataTypes.h */,
+			);
+			name = Source;
+			sourceTree = "<group>";
+		};
+		1AB674ADFE9D54B511CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8DD76F6C0486A84900D96B5E /* swapStratCpp */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		259612141776428400CEFE0E /* gameDataTypes */ = {
+			isa = PBXGroup;
+			children = (
+				2596124317764AF300CEFE0E /* TokenTypeVO.h */,
+				2596124117764ABC00CEFE0E /* TokenTypeVO.cpp */,
+				2596124717764B3000CEFE0E /* tileSpaceVO.h */,
+				2596124517764B1500CEFE0E /* tileSpaceVO.cpp */,
+				2596129517769FA300CEFE0E /* Player.h */,
+				2596129617769FA300CEFE0E /* Player.cpp */,
+			);
+			name = gameDataTypes;
+			sourceTree = "<group>";
+		};
+		259612191776452600CEFE0E /* gameModel */ = {
+			isa = PBXGroup;
+			children = (
+				259611D5177625F700CEFE0E /* gameModel.h */,
+				259611D6177625F700CEFE0E /* gameModel.cpp */,
+				259612141776428400CEFE0E /* gameDataTypes */,
+			);
+			name = gameModel;
+			sourceTree = "<group>";
+		};
+		2596121A1776453200CEFE0E /* gameView */ = {
+			isa = PBXGroup;
+			children = (
+				259611F717763CAC00CEFE0E /* gameView.h */,
+				259611F817763CAC00CEFE0E /* gameView.cpp */,
+			);
+			name = gameView;
+			sourceTree = "<group>";
+		};
+		2596128D1776835B00CEFE0E /* gameController */ = {
+			isa = PBXGroup;
+			children = (
+				2596128E1776837E00CEFE0E /* gameController.h */,
+				2596128F1776837E00CEFE0E /* gameController.cpp */,
+			);
+			name = gameController;
+			sourceTree = "<group>";
+		};
+		C6859E8C029090F304C91782 /* Documentation */ = {
+			isa = PBXGroup;
+			children = (
+				C6859E8B029090EE04C91782 /* swapStratCpp.1 */,
+			);
+			name = Documentation;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8DD76F620486A84900D96B5E /* swapStratCpp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1DEB923108733DC60010E9CD /* Build configuration list for PBXNativeTarget "swapStratCpp" */;
+			buildPhases = (
+				8DD76F640486A84900D96B5E /* Sources */,
+				8DD76F660486A84900D96B5E /* Frameworks */,
+				8DD76F690486A84900D96B5E /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = swapStratCpp;
+			productInstallPath = "$(HOME)/bin";
+			productName = swapStratCpp;
+			productReference = 8DD76F6C0486A84900D96B5E /* swapStratCpp */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		08FB7793FE84155DC02AAC07 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 1DEB923508733DC60010E9CD /* Build configuration list for PBXProject "swapStratCpp" */;
+			compatibilityVersion = "Xcode 3.1";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+			);
+			mainGroup = 08FB7794FE84155DC02AAC07 /* swapStratCpp */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8DD76F620486A84900D96B5E /* swapStratCpp */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8DD76F640486A84900D96B5E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8DD76F650486A84900D96B5E /* main.cpp in Sources */,
+				259611D7177625F700CEFE0E /* gameModel.cpp in Sources */,
+				259611F917763CAC00CEFE0E /* gameView.cpp in Sources */,
+				2596124217764ABC00CEFE0E /* TokenTypeVO.cpp in Sources */,
+				2596124617764B1500CEFE0E /* tileSpaceVO.cpp in Sources */,
+				259612901776837E00CEFE0E /* gameController.cpp in Sources */,
+				2596129717769FA300CEFE0E /* Player.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		1DEB923208733DC60010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				INSTALL_PATH = /usr/local/bin;
+				PRODUCT_NAME = swapStratCpp;
+			};
+			name = Debug;
+		};
+		1DEB923308733DC60010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_MODEL_TUNING = G5;
+				INSTALL_PATH = /usr/local/bin;
+				PRODUCT_NAME = swapStratCpp;
+			};
+			name = Release;
+		};
+		1DEB923608733DC60010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PREBINDING = NO;
+				SDKROOT = macosx10.6;
+			};
+			name = Debug;
+		};
+		1DEB923708733DC60010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = macosx10.6;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1DEB923108733DC60010E9CD /* Build configuration list for PBXNativeTarget "swapStratCpp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB923208733DC60010E9CD /* Debug */,
+				1DEB923308733DC60010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1DEB923508733DC60010E9CD /* Build configuration list for PBXProject "swapStratCpp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB923608733DC60010E9CD /* Debug */,
+				1DEB923708733DC60010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 08FB7793FE84155DC02AAC07 /* Project object */;
+}

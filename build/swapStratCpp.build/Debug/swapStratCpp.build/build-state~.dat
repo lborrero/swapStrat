@@ -1,0 +1,59 @@
+TswapStratCpp
+v7
+r0
+t393618613.398953
+cCheck dependencies
+cCompileC build/swapStratCpp.build/Debug/swapStratCpp.build/Objects-normal/x86_64/main.o /Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/main.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
+cLd /Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/build/Debug/swapStratCpp normal x86_64
+
+N/Developer/SDKs/MacOSX10.6.sdk
+c000000004C5342BA00000000000000EE
+t1280524986
+s238
+
+N/Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/build/Debug/swapStratCpp
+t1371925813
+s10632
+
+N/Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/build/swapStratCpp.build/Debug/swapStratCpp.build/Objects-normal/x86_64/main.o
+t1371925812
+s67032
+
+N/Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/build/swapStratCpp.build/Debug/swapStratCpp.build/Objects-normal/x86_64/swapStratCpp.LinkFileList
+c0000000051C5ED340000000000000091
+t1371925812
+s145
+
+N/Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/main.cpp
+c0000000051C5ED28000000000000008F
+t1371925800
+s143
+i<iostream>
+
+CCheck dependencies
+r0
+lSLF07#2@18"Check dependencies393618612#393618612#0(0"0(0#1#0"27866456492998768#0"0#
+
+CCompileC build/swapStratCpp.build/Debug/swapStratCpp.build/Objects-normal/x86_64/main.o /Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/main.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
+s393618612.498234
+e393618612.962611
+r1
+xCompileC
+xbuild/swapStratCpp.build/Debug/swapStratCpp.build/Objects-normal/x86_64/main.o
+x/Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/main.cpp
+xnormal
+xx86_64
+xc++
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@82"Compile /Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/main.cpp393618612#393618612#0(0"0(0#0#74"/Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/main.cpp7886488416478786560#1678"    cd /Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch x86_64 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/build/swapStratCpp.build/Debug/swapStratCpp.build/swapStratCpp-generated-files.hmap -I/Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/build/swapStratCpp.build/Debug/swapStratCpp.build/swapStratCpp-own-target-headers.hmap -I/Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/build/swapStratCpp.build/Debug/swapStratCpp.build/swapStratCpp-all-target-headers.hmap -iquote /Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/build/swapStratCpp.build/Debug/swapStratCpp.build/swapStratCpp-project-headers.hmap -F/Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/build/Debug -I/Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/build/Debug/include -I/Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/build/swapStratCpp.build/Debug/swapStratCpp.build/DerivedSources/x86_64 -I/Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/build/swapStratCpp.build/Debug/swapStratCpp.build/DerivedSources -c /Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/main.cpp -o /Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/build/swapStratCpp.build/Debug/swapStratCpp.build/Objects-normal/x86_64/main.o0#
+
+CLd /Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/build/Debug/swapStratCpp normal x86_64
+s393618612.962701
+e393618613.398907
+r1
+xLd
+x/Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/build/Debug/swapStratCpp
+xnormal
+xx86_64
+lSLF07#2@95"Link /Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/build/Debug/swapStratCpp393618612#393618613#0(0"0(0#0#0"8603092800#653"    cd /Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp    setenv MACOSX_DEPLOYMENT_TARGET 10.6    /Developer/usr/bin/g++-4.2 -arch x86_64 -isysroot /Developer/SDKs/MacOSX10.6.sdk -L/Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/build/Debug -F/Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/build/Debug -filelist /Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/build/swapStratCpp.build/Debug/swapStratCpp.build/Objects-normal/x86_64/swapStratCpp.LinkFileList -mmacosx-version-min=10.6 -o /Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/build/Debug/swapStratCpp0#
+
