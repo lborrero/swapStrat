@@ -20,22 +20,24 @@
 
 //template <class T> // when forewording a template class, do we have to have the template signature fro it to be regognized as a template class?
 
-class GameModel{
-private:
-	tileSpaceVO* board;
-    Player players[NUMBER_OF_PLAYERS];
+namespace swapStratCpp {
 	
-public:
-	int ROW, COL, TOTAL;
-	
-    GameModel();
-	GameModel(int, int);
-	~GameModel();
-	
-	void setBoardValues(int,int);
-    tileSpaceVO* getBoard();
-	void setPlayers();
-	Player getPlayer(int);
-};
-
+	class GameModel{
+	private:
+		tileSpaceVO* board;
+		Player players[NUMBER_OF_PLAYERS];
+		
+	public:
+		int ROW, COL, TOTAL;
+		
+		GameModel();
+		GameModel(int, int);
+		~GameModel();
+		
+		void setBoardValues(int,int);
+		tileSpaceVO* getBoard();
+		void setPlayers();
+		Player getPlayer(int);
+	};
+}
 #endif

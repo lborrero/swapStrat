@@ -9,7 +9,9 @@
 
 #include "tileSpaceVO.h"
 
-tileSpaceVO::tileSpaceVO(){
-	_tileType = occupied;
-	_tokenType = TokenTypeVO();
+namespace swapStratCpp {
+	tileSpaceVO::tileSpaceVO(){
+		_tileType = occupied;
+		_tokenType = TokenTypeVO();
+	}
 }

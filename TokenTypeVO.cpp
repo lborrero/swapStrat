@@ -9,11 +9,14 @@
 
 #include "tokenTypeVO.h"
 
-TokenTypeVO::TokenTypeVO(){
-	_tokenType = none;
-}
+namespace swapStratCpp {
 
-TokenTypeVO::TokenTypeVO(tokenType tt)
-{
-	_tokenType = tt;
+	TokenTypeVO::TokenTypeVO(){
+		_tokenType = none;
+	}
+
+	TokenTypeVO::TokenTypeVO(tokenType tt)
+	{
+		_tokenType = tt;
+	}
 }

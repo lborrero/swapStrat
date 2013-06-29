@@ -1,0 +1,45 @@
+In file included from /Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/gameModel.cpp:10:
+/Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/gameModel.h:25: error: ISO C++ forbids declaration of 'tileSpaceVO' with no type
+/Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/gameModel.h:25: error: expected ';' before '*' token
+/Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/gameModel.h:26: error: 'Player' does not name a type
+/Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/gameModel.h:36: error: ISO C++ forbids declaration of 'tileSpaceVO' with no type
+/Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/gameModel.h:36: error: expected ';' before '*' token
+/Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/gameModel.h:38: error: 'Player' does not name a type
+/Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/gameModel.cpp:14: error: definition of 'void GameModel::GameModel()' is not in namespace enclosing 'GameModel'
+/Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/gameModel.cpp: In constructor 'GameModel::GameModel()':
+/Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/gameModel.cpp:19: error: 'board' was not declared in this scope
+/Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/gameModel.cpp:19: error: expected type-specifier before 'tileSpaceVO'
+/Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/gameModel.cpp:19: error: expected `;' before 'tileSpaceVO'
+/Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/gameModel.cpp: At global scope:
+/Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/gameModel.cpp:22: error: definition of 'void GameModel::GameModel(int, int)' is not in namespace enclosing 'GameModel'
+/Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/gameModel.cpp: In constructor 'GameModel::GameModel(int, int)':
+/Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/gameModel.cpp:27: error: 'board' was not declared in this scope
+/Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/gameModel.cpp:27: error: expected type-specifier before 'tileSpaceVO'
+/Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/gameModel.cpp:27: error: expected `;' before 'tileSpaceVO'
+/Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/gameModel.cpp: At global scope:
+/Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/gameModel.cpp:30: error: definition of 'void GameModel::GameModel()' is not in namespace enclosing 'GameModel'
+/Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/gameModel.cpp: In destructor 'GameModel::~GameModel()':
+/Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/gameModel.cpp:31: error: 'board' was not declared in this scope
+/Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/gameModel.cpp: At global scope:
+/Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/gameModel.cpp:34: error: definition of 'void GameModel::setBoardValues(int, int)' is not in namespace enclosing 'GameModel'
+/Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/gameModel.cpp: In member function 'void GameModel::setBoardValues(int, int)':
+/Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/gameModel.cpp:35: error: 'board' was not declared in this scope
+/Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/gameModel.cpp:40: error: expected type-specifier before 'tileSpaceVO'
+/Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/gameModel.cpp:40: error: expected `;' before 'tileSpaceVO'
+/Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/gameModel.cpp: At global scope:
+/Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/gameModel.cpp:43: error: definition of 'swapStratCpp::tileSpaceVO* GameModel::getBoard()' is not in namespace enclosing 'GameModel'
+/Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/gameModel.cpp:43: error: no 'swapStratCpp::tileSpaceVO* GameModel::getBoard()' member function declared in class 'GameModel'
+/Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/gameModel.cpp: In member function 'swapStratCpp::tileSpaceVO* GameModel::getBoard()':
+/Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/gameModel.cpp:45: error: 'board' was not declared in this scope
+/Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/gameModel.cpp: At global scope:
+/Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/gameModel.cpp:49: error: definition of 'void GameModel::setPlayers()' is not in namespace enclosing 'GameModel'
+/Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/gameModel.cpp: In member function 'void GameModel::setPlayers()':
+/Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/gameModel.cpp:50: error: 'TokenTypeVO' was not declared in this scope
+/Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/gameModel.cpp:50: error: expected `;' before 'tokenTypeArray'
+/Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/gameModel.cpp:58: error: 'players' was not declared in this scope
+/Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/gameModel.cpp:58: error: 'tokenTypeArray' was not declared in this scope
+/Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/gameModel.cpp: At global scope:
+/Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/gameModel.cpp:62: error: definition of 'swapStratCpp::Player GameModel::getPlayer(int)' is not in namespace enclosing 'GameModel'
+/Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/gameModel.cpp:62: error: no 'swapStratCpp::Player GameModel::getPlayer(int)' member function declared in class 'GameModel'
+/Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/gameModel.cpp: In member function 'swapStratCpp::Player GameModel::getPlayer(int)':
+/Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/gameModel.cpp:63: error: 'players' was not declared in this scope

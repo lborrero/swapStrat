@@ -15,16 +15,20 @@
 
 using namespace std;
 
-class GameView{
+namespace swapStratCpp {
+
+	class GameView{
+		
+	public:
+		
+		void drawSpace(int);
+		
+		void drawBoard(int* , int, int);
+		
+		void drawPlayer(string);
+		void drawPlayerTokens(int *, int);
+	};
 	
-public:
-	
-    void drawSpace(int);
-	
-    void drawBoard(int* , int, int);
-	
-	void drawPlayer(string);
-	void drawPlayerTokens(int *, int);
-};
+}
 
 #endif

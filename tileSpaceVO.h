@@ -12,19 +12,23 @@
 
 #include "tokenTypeVO.h"
 
-enum tileType{
-    empty, occupied	
-};
+namespace swapStratCpp {
 
-class tileSpaceVO{
-public:
-	tileSpaceVO();
-    
-    tileType _tileType;
-	TokenTypeVO _tokenType;
-	
-	tileType getTileType(){return _tileType;};
-	tokenType getTokenType(){return _tokenType.getTokenType();};
-};
+	enum tileType{
+		empty, occupied	
+	};
+
+	class tileSpaceVO{
+	public:
+		tileSpaceVO();
+		
+		tileType _tileType;
+		TokenTypeVO _tokenType;
+		
+		tileType getTileType(){return _tileType;};
+		tokenType getTokenType(){return _tokenType.getTokenType();};
+	};
+
+}
 
 #endif

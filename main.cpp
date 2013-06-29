@@ -15,6 +15,8 @@
 #include <exception>
 #include "gameController.h"
 
+using namespace	swapStratCpp;
+
 int main(int argc, const char * argv[])
 {	
 	GameController gc;

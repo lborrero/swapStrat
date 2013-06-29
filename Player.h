@@ -10,14 +10,16 @@
 #ifndef __PLAYER__
 #define __PLAYER__
 
-class TokenTypeVO;
+namespace swapStratCpp{
+	class TokenTypeVO;
 
-class Player
-{	
-    TokenTypeVO* playerTokens;
-public:
-	void setTokens(TokenTypeVO tokenArray[]);
-	TokenTypeVO* getTokens();
-};
-
+	class Player
+	{	
+		TokenTypeVO* playerTokens;
+	public:
+		void setTokens(TokenTypeVO tokenArray[]);
+		TokenTypeVO* getTokens();
+	};
+}
+	
 #endif

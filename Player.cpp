@@ -9,11 +9,13 @@
 
 #include "Player.h"
 
-void Player::setTokens(TokenTypeVO tokenArray[]){
-	playerTokens = tokenArray;
-}
+namespace swapStratCpp {
+	void Player::setTokens(TokenTypeVO tokenArray[]){
+		playerTokens = tokenArray;
+	}
 
-//template <class T>
-//void Player<T>::setPlayerTokens(T* tokens, int i){
-//	availableTokens = tokens;
-//}
+	//template <class T>
+	//void Player<T>::setPlayerTokens(T* tokens, int i){
+	//	availableTokens = tokens;
+	//}
+}

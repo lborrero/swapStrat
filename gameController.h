@@ -13,14 +13,18 @@
 #include "gameModel.h"
 #include "gameView.h"
 
-class GameController
-{
-	GameModel gameModel; //why can't i do : gameModel(6, 6); here ?
-	GameView gameView;
+namespace swapStratCpp {
+
+	class GameController
+	{
+		GameModel gameModel; //why can't i do : gameModel(6, 6); here ?
+		GameView gameView;
+		
+	public:
+		GameController();
+		void printboard();
+	};
 	
-public:
-	GameController();
-	void printboard();
-};
+}
 
 #endif
