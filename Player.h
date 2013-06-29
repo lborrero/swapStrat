@@ -10,15 +10,26 @@
 #ifndef __PLAYER__
 #define __PLAYER__
 
+#include <iostream>
+#include <string>
+
+using namespace std;
+
 namespace swapStratCpp{
 	class TokenTypeVO;
 
 	class Player
 	{	
+		string playerName;
 		TokenTypeVO* playerTokens;
 	public:
+		Player();
+		
 		void setTokens(TokenTypeVO tokenArray[]);
 		TokenTypeVO* getTokens();
+		
+		void setPlayerName(string);
+		string getPlayerName();
 	};
 }
 	

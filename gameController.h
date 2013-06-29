@@ -23,6 +23,7 @@ namespace swapStratCpp {
 	public:
 		GameController();
 		void printboard();
+		void printPlayerTokens();
 	};
 	
 }

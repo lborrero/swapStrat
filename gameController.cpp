@@ -25,10 +25,10 @@ namespace swapStratCpp {
 		gameView.drawBoard(pboardInInts, gameModel.ROW, gameModel.COL);
 	}
 
-	//void GameController::printPlayerTokens(){
-	//	Player p1 = gameModel.getPlayer(0);
-	//	Player p2 = gameModel.getPlayer(1);
-	//	gameView.drawPlayer(p1.getName());
-	//	gameView.drawPlayerTokens(p1.get)
-	//}
+	void GameController::printPlayerTokens(){
+		Player p1 = gameModel.getPlayer(0);
+		Player p2 = gameModel.getPlayer(1);
+//		gameView.drawPlayer(p1.getName());
+//		gameView.drawPlayerTokens(p1.getPlayerTokens());
+	}
 }

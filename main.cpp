@@ -21,5 +21,6 @@ int main(int argc, const char * argv[])
 {	
 	GameController gc;
 	gc.printboard();
+	
     return 0;
 }

@@ -1,7 +1,7 @@
 TswapStratCpp
 v7
 r0
-t394161107.417404
+t394162962.728997
 cCheck dependencies
 cCompileC build/swapStratCpp.build/Debug/swapStratCpp.build/Objects-normal/x86_64/main.o /Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/main.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
 cCompileC build/swapStratCpp.build/Debug/swapStratCpp.build/Objects-normal/x86_64/gameModel.o /Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/gameModel.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
@@ -18,15 +18,15 @@ t1280524986
 s238
 
 N/Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/Player.cpp
-c0000000051CE33BF000000000000018D
-t1372468159
-s397
+c0000000051CE3B920000000000000213
+t1372470162
+s531
 i"Player.h"
 
 N/Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/Player.h
-c0000000051CE33AD000000000000017B
-t1372468141
-s379
+c0000000051CE3B410000000000000217
+t1372470081
+s535
 
 N/Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/TokenTypeVO.cpp
 c0000000051CE336C000000000000014B
@@ -40,32 +40,32 @@ t1372468051
 s563
 
 N/Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/build/Debug/swapStratCpp
-t1372468307
-s27776
+t1372470162
+s34784
 
 N/Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/build/swapStratCpp.build/Debug/swapStratCpp.build/Objects-normal/x86_64/Player.o
-t1372468160
-s3012
+t1372470162
+s51012
 
 N/Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/build/swapStratCpp.build/Debug/swapStratCpp.build/Objects-normal/x86_64/TokenTypeVO.o
 t1372468076
 s4780
 
 N/Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/build/swapStratCpp.build/Debug/swapStratCpp.build/Objects-normal/x86_64/gameController.o
-t1372468293
-s52576
+t1372470082
+s54440
 
 N/Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/build/swapStratCpp.build/Debug/swapStratCpp.build/Objects-normal/x86_64/gameModel.o
-t1372468292
-s22900
+t1372470081
+s58728
 
 N/Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/build/swapStratCpp.build/Debug/swapStratCpp.build/Objects-normal/x86_64/gameView.o
 t1372468292
 s70904
 
 N/Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/build/swapStratCpp.build/Debug/swapStratCpp.build/Objects-normal/x86_64/main.o
-t1372468306
-s50268
+t1372470081
+s50588
 
 N/Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/build/swapStratCpp.build/Debug/swapStratCpp.build/Objects-normal/x86_64/swapStratCpp.LinkFileList
 c0000000051C75BFD000000000000041A
@@ -81,15 +81,15 @@ t1371959898
 s3472
 
 N/Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/gameController.cpp
-c0000000051CE34270000000000000336
-t1372468263
-s822
+c0000000051CE3A46000000000000033D
+t1372469830
+s829
 i"gameController.h"
 
 N/Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/gameController.h
-c0000000051CE344000000000000001D5
-t1372468288
-s469
+c0000000051CE36E200000000000001F1
+t1372468962
+s497
 i"gameModel.h"
 i"gameView.h"
 
@@ -99,9 +99,9 @@ t1371933741
 s248
 
 N/Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/gameModel.cpp
-c0000000051CE33D60000000000000468
-t1372468182
-s1128
+c0000000051CE3A38000000000000046A
+t1372469816
+s1130
 i"gameModel.h"
 
 N/Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/gameModel.h
@@ -127,9 +127,9 @@ i<iostream>
 i<string>
 
 N/Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/main.cpp
-c0000000051CE34520000000000000151
-t1372468306
-s337
+c0000000051CE3A880000000000000153
+t1372469896
+s339
 i<exception>
 i"gameController.h"
 
@@ -158,11 +158,11 @@ s512
 
 CCheck dependencies
 r0
-lSLF07#2@18"Check dependencies394161107#394161107#0(0"0(0#1#0"8614368672#0"0#
+lSLF07#2@18"Check dependencies394162962#394162962#0(0"0(0#1#0"8615509568#0"0#
 
 CCompileC build/swapStratCpp.build/Debug/swapStratCpp.build/Objects-normal/x86_64/Player.o /Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/Player.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
-s394161092.926628
-e394161092.939779
+s394162962.639136
+e394162962.704184
 r1
 xCompileC
 xbuild/swapStratCpp.build/Debug/swapStratCpp.build/Objects-normal/x86_64/Player.o
@@ -171,7 +171,7 @@ xnormal
 xx86_64
 xc++
 xcom.apple.compilers.gcc.4_2
-lSLF07#2@84"Compile /Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/Player.cpp394161092#394161093#0(0"0(0#0#76"/Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/Player.cpp8616296160#1682"    cd /Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch x86_64 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/build/swapStratCpp.build/Debug/swapStratCpp.build/swapStratCpp-generated-files.hmap -I/Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/build/swapStratCpp.build/Debug/swapStratCpp.build/swapStratCpp-own-target-headers.hmap -I/Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/build/swapStratCpp.build/Debug/swapStratCpp.build/swapStratCpp-all-target-headers.hmap -iquote /Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/build/swapStratCpp.build/Debug/swapStratCpp.build/swapStratCpp-project-headers.hmap -F/Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/build/Debug -I/Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/build/Debug/include -I/Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/build/swapStratCpp.build/Debug/swapStratCpp.build/DerivedSources/x86_64 -I/Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/build/swapStratCpp.build/Debug/swapStratCpp.build/DerivedSources -c /Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/Player.cpp -o /Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/build/swapStratCpp.build/Debug/swapStratCpp.build/Objects-normal/x86_64/Player.o0#
+lSLF07#2@84"Compile /Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/Player.cpp394162962#394162962#0(0"0(0#0#76"/Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/Player.cpp8613585056#1682"    cd /Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch x86_64 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/build/swapStratCpp.build/Debug/swapStratCpp.build/swapStratCpp-generated-files.hmap -I/Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/build/swapStratCpp.build/Debug/swapStratCpp.build/swapStratCpp-own-target-headers.hmap -I/Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/build/swapStratCpp.build/Debug/swapStratCpp.build/swapStratCpp-all-target-headers.hmap -iquote /Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/build/swapStratCpp.build/Debug/swapStratCpp.build/swapStratCpp-project-headers.hmap -F/Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/build/Debug -I/Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/build/Debug/include -I/Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/build/swapStratCpp.build/Debug/swapStratCpp.build/DerivedSources/x86_64 -I/Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/build/swapStratCpp.build/Debug/swapStratCpp.build/DerivedSources -c /Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/Player.cpp -o /Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/build/swapStratCpp.build/Debug/swapStratCpp.build/Objects-normal/x86_64/Player.o0#
 
 CCompileC build/swapStratCpp.build/Debug/swapStratCpp.build/Objects-normal/x86_64/TokenTypeVO.o /Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/TokenTypeVO.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
 s394161092.772871
@@ -187,8 +187,8 @@ xcom.apple.compilers.gcc.4_2
 lSLF07#2@89"Compile /Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/TokenTypeVO.cpp394161092#394161092#0(0"0(0#0#81"/Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/TokenTypeVO.cpp8615526304#1692"    cd /Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch x86_64 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/build/swapStratCpp.build/Debug/swapStratCpp.build/swapStratCpp-generated-files.hmap -I/Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/build/swapStratCpp.build/Debug/swapStratCpp.build/swapStratCpp-own-target-headers.hmap -I/Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/build/swapStratCpp.build/Debug/swapStratCpp.build/swapStratCpp-all-target-headers.hmap -iquote /Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/build/swapStratCpp.build/Debug/swapStratCpp.build/swapStratCpp-project-headers.hmap -F/Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/build/Debug -I/Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/build/Debug/include -I/Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/build/swapStratCpp.build/Debug/swapStratCpp.build/DerivedSources/x86_64 -I/Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/build/swapStratCpp.build/Debug/swapStratCpp.build/DerivedSources -c /Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/TokenTypeVO.cpp -o /Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/build/swapStratCpp.build/Debug/swapStratCpp.build/Objects-normal/x86_64/TokenTypeVO.o0#
 
 CCompileC build/swapStratCpp.build/Debug/swapStratCpp.build/Objects-normal/x86_64/gameController.o /Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/gameController.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
-s394161092.775009
-e394161093.124659
+s394162881.939786
+e394162882.369547
 r1
 xCompileC
 xbuild/swapStratCpp.build/Debug/swapStratCpp.build/Objects-normal/x86_64/gameController.o
@@ -197,11 +197,11 @@ xnormal
 xx86_64
 xc++
 xcom.apple.compilers.gcc.4_2
-lSLF07#2@92"Compile /Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/gameController.cpp394161092#394161093#0(0"0(0#0#84"/Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/gameController.cpp8614931936#1698"    cd /Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch x86_64 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/build/swapStratCpp.build/Debug/swapStratCpp.build/swapStratCpp-generated-files.hmap -I/Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/build/swapStratCpp.build/Debug/swapStratCpp.build/swapStratCpp-own-target-headers.hmap -I/Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/build/swapStratCpp.build/Debug/swapStratCpp.build/swapStratCpp-all-target-headers.hmap -iquote /Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/build/swapStratCpp.build/Debug/swapStratCpp.build/swapStratCpp-project-headers.hmap -F/Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/build/Debug -I/Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/build/Debug/include -I/Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/build/swapStratCpp.build/Debug/swapStratCpp.build/DerivedSources/x86_64 -I/Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/build/swapStratCpp.build/Debug/swapStratCpp.build/DerivedSources -c /Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/gameController.cpp -o /Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/build/swapStratCpp.build/Debug/swapStratCpp.build/Objects-normal/x86_64/gameController.o0#
+lSLF07#2@92"Compile /Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/gameController.cpp394162881#394162882#0(0"0(0#0#84"/Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/gameController.cpp8615942304#1698"    cd /Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch x86_64 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/build/swapStratCpp.build/Debug/swapStratCpp.build/swapStratCpp-generated-files.hmap -I/Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/build/swapStratCpp.build/Debug/swapStratCpp.build/swapStratCpp-own-target-headers.hmap -I/Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/build/swapStratCpp.build/Debug/swapStratCpp.build/swapStratCpp-all-target-headers.hmap -iquote /Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/build/swapStratCpp.build/Debug/swapStratCpp.build/swapStratCpp-project-headers.hmap -F/Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/build/Debug -I/Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/build/Debug/include -I/Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/build/swapStratCpp.build/Debug/swapStratCpp.build/DerivedSources/x86_64 -I/Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/build/swapStratCpp.build/Debug/swapStratCpp.build/DerivedSources -c /Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/gameController.cpp -o /Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/build/swapStratCpp.build/Debug/swapStratCpp.build/Objects-normal/x86_64/gameController.o0#
 
 CCompileC build/swapStratCpp.build/Debug/swapStratCpp.build/Objects-normal/x86_64/gameModel.o /Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/gameModel.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
-s394161092.382169
-e394161092.563783
+s394162881.526151
+e394162881.958179
 r1
 xCompileC
 xbuild/swapStratCpp.build/Debug/swapStratCpp.build/Objects-normal/x86_64/gameModel.o
@@ -210,7 +210,9 @@ xnormal
 xx86_64
 xc++
 xcom.apple.compilers.gcc.4_2
-lSLF07#2@87"Compile /Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/gameModel.cpp394161092#394161092#0(0"0(0#0#79"/Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/gameModel.cpp8613826656#1688"    cd /Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch x86_64 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/build/swapStratCpp.build/Debug/swapStratCpp.build/swapStratCpp-generated-files.hmap -I/Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/build/swapStratCpp.build/Debug/swapStratCpp.build/swapStratCpp-own-target-headers.hmap -I/Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/build/swapStratCpp.build/Debug/swapStratCpp.build/swapStratCpp-all-target-headers.hmap -iquote /Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/build/swapStratCpp.build/Debug/swapStratCpp.build/swapStratCpp-project-headers.hmap -F/Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/build/Debug -I/Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/build/Debug/include -I/Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/build/swapStratCpp.build/Debug/swapStratCpp.build/DerivedSources/x86_64 -I/Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/build/swapStratCpp.build/Debug/swapStratCpp.build/DerivedSources -c /Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/gameModel.cpp -o /Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/build/swapStratCpp.build/Debug/swapStratCpp.build/Objects-normal/x86_64/gameModel.o0#
+o/Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/gameModel.cpp: In member function 'void swapStratCpp::GameModel::setPlayers()':
+o/Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/gameModel.cpp:50: warning: unused variable 'tokenTypeArray'
+lSLF07#2@87"Compile /Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/gameModel.cpp394162881#394162881#0(272"/Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/gameModel.cpp: In member function 'void swapStratCpp::GameModel::setPlayers()':/Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/gameModel.cpp:50: warning: unused variable 'tokenTypeArray'1(22@32"Unused variable 'tokenTypeArray'394162881#146#126#0(6@79"/Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/gameModel.cpp394162616#50#0#50#0#19"unused variable '*'0(0#0#79"/Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/gameModel.cpp8615794880#1688"    cd /Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch x86_64 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/build/swapStratCpp.build/Debug/swapStratCpp.build/swapStratCpp-generated-files.hmap -I/Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/build/swapStratCpp.build/Debug/swapStratCpp.build/swapStratCpp-own-target-headers.hmap -I/Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/build/swapStratCpp.build/Debug/swapStratCpp.build/swapStratCpp-all-target-headers.hmap -iquote /Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/build/swapStratCpp.build/Debug/swapStratCpp.build/swapStratCpp-project-headers.hmap -F/Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/build/Debug -I/Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/build/Debug/include -I/Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/build/swapStratCpp.build/Debug/swapStratCpp.build/DerivedSources/x86_64 -I/Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/build/swapStratCpp.build/Debug/swapStratCpp.build/DerivedSources -c /Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/gameModel.cpp -o /Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/build/swapStratCpp.build/Debug/swapStratCpp.build/Objects-normal/x86_64/gameModel.o0#
 
 CCompileC build/swapStratCpp.build/Debug/swapStratCpp.build/Objects-normal/x86_64/gameView.o /Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/gameView.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
 s394161092.563881
@@ -226,8 +228,8 @@ xcom.apple.compilers.gcc.4_2
 lSLF07#2@86"Compile /Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/gameView.cpp394161092#394161093#0(0"0(0#0#78"/Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/gameView.cpp8614909792#1686"    cd /Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch x86_64 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/build/swapStratCpp.build/Debug/swapStratCpp.build/swapStratCpp-generated-files.hmap -I/Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/build/swapStratCpp.build/Debug/swapStratCpp.build/swapStratCpp-own-target-headers.hmap -I/Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/build/swapStratCpp.build/Debug/swapStratCpp.build/swapStratCpp-all-target-headers.hmap -iquote /Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/build/swapStratCpp.build/Debug/swapStratCpp.build/swapStratCpp-project-headers.hmap -F/Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/build/Debug -I/Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/build/Debug/include -I/Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/build/swapStratCpp.build/Debug/swapStratCpp.build/DerivedSources/x86_64 -I/Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/build/swapStratCpp.build/Debug/swapStratCpp.build/DerivedSources -c /Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/gameView.cpp -o /Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/build/swapStratCpp.build/Debug/swapStratCpp.build/Objects-normal/x86_64/gameView.o0#
 
 CCompileC build/swapStratCpp.build/Debug/swapStratCpp.build/Objects-normal/x86_64/main.o /Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/main.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
-s394161107.390296
-e394161107.395030
+s394162881.525153
+e394162881.939490
 r1
 xCompileC
 xbuild/swapStratCpp.build/Debug/swapStratCpp.build/Objects-normal/x86_64/main.o
@@ -236,7 +238,7 @@ xnormal
 xx86_64
 xc++
 xcom.apple.compilers.gcc.4_2
-lSLF07#2@82"Compile /Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/main.cpp394161107#394161107#0(0"0(0#0#74"/Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/main.cpp8613751360#1678"    cd /Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch x86_64 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/build/swapStratCpp.build/Debug/swapStratCpp.build/swapStratCpp-generated-files.hmap -I/Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/build/swapStratCpp.build/Debug/swapStratCpp.build/swapStratCpp-own-target-headers.hmap -I/Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/build/swapStratCpp.build/Debug/swapStratCpp.build/swapStratCpp-all-target-headers.hmap -iquote /Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/build/swapStratCpp.build/Debug/swapStratCpp.build/swapStratCpp-project-headers.hmap -F/Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/build/Debug -I/Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/build/Debug/include -I/Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/build/swapStratCpp.build/Debug/swapStratCpp.build/DerivedSources/x86_64 -I/Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/build/swapStratCpp.build/Debug/swapStratCpp.build/DerivedSources -c /Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/main.cpp -o /Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/build/swapStratCpp.build/Debug/swapStratCpp.build/Objects-normal/x86_64/main.o0#
+lSLF07#2@82"Compile /Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/main.cpp394162881#394162881#0(0"0(0#0#74"/Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/main.cpp8615886368#1678"    cd /Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch x86_64 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/build/swapStratCpp.build/Debug/swapStratCpp.build/swapStratCpp-generated-files.hmap -I/Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/build/swapStratCpp.build/Debug/swapStratCpp.build/swapStratCpp-own-target-headers.hmap -I/Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/build/swapStratCpp.build/Debug/swapStratCpp.build/swapStratCpp-all-target-headers.hmap -iquote /Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/build/swapStratCpp.build/Debug/swapStratCpp.build/swapStratCpp-project-headers.hmap -F/Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/build/Debug -I/Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/build/Debug/include -I/Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/build/swapStratCpp.build/Debug/swapStratCpp.build/DerivedSources/x86_64 -I/Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/build/swapStratCpp.build/Debug/swapStratCpp.build/DerivedSources -c /Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/main.cpp -o /Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/build/swapStratCpp.build/Debug/swapStratCpp.build/Objects-normal/x86_64/main.o0#
 
 CCompileC build/swapStratCpp.build/Debug/swapStratCpp.build/Objects-normal/x86_64/tileSpaceVO.o /Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/tileSpaceVO.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
 s394161092.774003
@@ -265,12 +267,12 @@ xcom.apple.compilers.gcc.4_2
 lSLF07#2@89"Compile /Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/tokenTypeVO.cpp393652698#393652698#0(0"0(0#0#81"/Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/tokenTypeVO.cpp8617711712#1692"    cd /Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch x86_64 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/build/swapStratCpp.build/Debug/swapStratCpp.build/swapStratCpp-generated-files.hmap -I/Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/build/swapStratCpp.build/Debug/swapStratCpp.build/swapStratCpp-own-target-headers.hmap -I/Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/build/swapStratCpp.build/Debug/swapStratCpp.build/swapStratCpp-all-target-headers.hmap -iquote /Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/build/swapStratCpp.build/Debug/swapStratCpp.build/swapStratCpp-project-headers.hmap -F/Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/build/Debug -I/Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/build/Debug/include -I/Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/build/swapStratCpp.build/Debug/swapStratCpp.build/DerivedSources/x86_64 -I/Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/build/swapStratCpp.build/Debug/swapStratCpp.build/DerivedSources -c /Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/tokenTypeVO.cpp -o /Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/build/swapStratCpp.build/Debug/swapStratCpp.build/Objects-normal/x86_64/tokenTypeVO.o0#
 
 CLd /Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/build/Debug/swapStratCpp normal x86_64
-s394161107.395534
-e394161107.417359
+s394162962.704249
+e394162962.728950
 r1
 xLd
 x/Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/build/Debug/swapStratCpp
 xnormal
 xx86_64
-lSLF07#2@95"Link /Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/build/Debug/swapStratCpp394161107#394161107#0(0"0(0#0#0"8615003552#653"    cd /Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp    setenv MACOSX_DEPLOYMENT_TARGET 10.6    /Developer/usr/bin/g++-4.2 -arch x86_64 -isysroot /Developer/SDKs/MacOSX10.6.sdk -L/Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/build/Debug -F/Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/build/Debug -filelist /Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/build/swapStratCpp.build/Debug/swapStratCpp.build/Objects-normal/x86_64/swapStratCpp.LinkFileList -mmacosx-version-min=10.6 -o /Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/build/Debug/swapStratCpp0#
+lSLF07#2@95"Link /Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/build/Debug/swapStratCpp394162962#394162962#0(0"0(0#0#0"8613989344#653"    cd /Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp    setenv MACOSX_DEPLOYMENT_TARGET 10.6    /Developer/usr/bin/g++-4.2 -arch x86_64 -isysroot /Developer/SDKs/MacOSX10.6.sdk -L/Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/build/Debug -F/Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/build/Debug -filelist /Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/build/swapStratCpp.build/Debug/swapStratCpp.build/Objects-normal/x86_64/swapStratCpp.LinkFileList -mmacosx-version-min=10.6 -o /Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/build/Debug/swapStratCpp0#
 

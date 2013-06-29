@@ -55,7 +55,7 @@ namespace swapStratCpp {
 														TokenTypeVO(T34)};
 		for (int i=0; i<NUMBER_OF_PLAYERS; i++) 
 		{
-			players[i].setTokens(tokenTypeArray);	
+//			players[i].setTokens(tokenTypeArray);	
 		}
 	}
 

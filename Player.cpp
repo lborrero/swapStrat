@@ -10,12 +10,24 @@
 #include "Player.h"
 
 namespace swapStratCpp {
+	
+	Player::Player(){
+		playerName = "DefaultPlayerName";
+	}
+	
+	void Player::setPlayerName(string s){
+		playerName = s;
+	}
+	
+	string Player::getPlayerName(){
+		return playerName;
+	}
+	
 	void Player::setTokens(TokenTypeVO tokenArray[]){
 		playerTokens = tokenArray;
 	}
-
-	//template <class T>
-	//void Player<T>::setPlayerTokens(T* tokens, int i){
-	//	availableTokens = tokens;
-	//}
+	
+	TokenTypeVO* Player::getTokens(){
+		return playerTokens;
+	}
 }
