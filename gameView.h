@@ -26,7 +26,7 @@ namespace swapStratCpp {
 		void drawBoard(int* , int, int);
 		
 		void drawPlayer(string);
-		void drawPlayerTokens(int *, int);
+		void drawPlayerTokens(int playerTokens[], int);
 	};
 	
 }

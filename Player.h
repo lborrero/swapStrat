@@ -12,6 +12,7 @@
 
 #include <iostream>
 #include <string>
+#include "TokenTypeVO.h"
 
 using namespace std;
 
@@ -25,8 +26,8 @@ namespace swapStratCpp{
 	public:
 		Player();
 		
-		void setTokens(TokenTypeVO tokenArray[]);
-		TokenTypeVO* getTokens();
+		void setPlayerTokens(TokenTypeVO tokenArray[]);
+		TokenTypeVO* getPlayerTokens();
 		
 		void setPlayerName(string);
 		string getPlayerName();

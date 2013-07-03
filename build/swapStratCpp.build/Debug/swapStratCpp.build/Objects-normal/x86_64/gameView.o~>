@@ -1,4 +1,0 @@
-/Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/gameView.cpp:14: error: definition of 'void GameView::drawSpace(int)' is not in namespace enclosing 'GameView'
-/Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/gameView.cpp:70: error: definition of 'void GameView::drawBoard(int*, int, int)' is not in namespace enclosing 'GameView'
-/Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/gameView.cpp:94: error: definition of 'void GameView::drawPlayer(std::string)' is not in namespace enclosing 'GameView'
-/Users/leonardoborreroluz/Documents/Leo/Work/iOStuts/swapStratCpp/gameView.cpp:98: error: definition of 'void GameView::drawPlayerTokens(int*, int)' is not in namespace enclosing 'GameView'

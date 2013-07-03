@@ -9,6 +9,7 @@
 
 #ifndef __TOKEN_TYPES__
 #define __TOKEN_TYPES__
+#include <iostream>
 
 namespace swapStratCpp {
 	enum tokenType{
@@ -32,8 +33,8 @@ namespace swapStratCpp {
 		tokenType _tokenType;
 		TokenTypeVO();
 		TokenTypeVO(tokenType);
-		
 		//    teamType _teamType;
+		
 		tokenType getTokenType(){return _tokenType;};
 		void setTokenType(tokenType tt){_tokenType = tt;};
 	};

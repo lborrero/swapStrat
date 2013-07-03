@@ -95,7 +95,7 @@ namespace swapStratCpp {
 		cout << playerName << ": ";
 	}
 
-	void GameView::drawPlayerTokens(int * playerTokens, int numberOfTokens){
+	void GameView::drawPlayerTokens(int playerTokens[], int numberOfTokens){
 		for(int i=0; i<numberOfTokens; i++){
 			cout << playerTokens[i];
 		}

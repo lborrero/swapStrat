@@ -26,7 +26,7 @@ namespace swapStratCpp {
 		TokenTypeVO _tokenType;
 		
 		tileType getTileType(){return _tileType;};
-		tokenType getTokenType(){return _tokenType.getTokenType();};
+		tokenType getTokenTypeFromTile(){return _tokenType.getTokenType();};
 	};
 
 }
