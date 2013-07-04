@@ -14,6 +14,7 @@
 #include "tokenTypeVO.h"
 #include <vector>
 #include "Player.h"
+#include <sstream>
 
 #define NUMBER_OF_PLAYERS 2
 #define NUMBER_OF_TOKENS 6

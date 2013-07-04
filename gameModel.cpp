@@ -50,6 +50,11 @@ namespace swapStratCpp {
 		tokenType tokenTypeArray[NUMBER_OF_TOKENS] = {T12, T13, T14, T23, T24, T34};
 		for (int i=0; i<NUMBER_OF_PLAYERS; i++) 
 		{
+            stringstream name;
+            name << "Player";
+            name << i+1;
+            
+            players[i].setPlayerName(name.str());
 			players[i].setPlayerTokens(tokenTypeArray, NUMBER_OF_TOKENS);
 		}
 	}
