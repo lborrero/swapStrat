@@ -14,6 +14,9 @@ namespace swapStratCpp {
 	Player::Player(){
 		playerName = "DefaultPlayerName";
 	}
+    
+    Player::~Player(){
+    }
 	
 	void Player::setPlayerName(string s){
 		playerName = s;
@@ -23,20 +26,15 @@ namespace swapStratCpp {
 		return playerName;
 	}
 	
-	void Player::setPlayerTokens(TokenTypeVO tokenArray[]){
-		cout <<  "setPlayerTokens" << endl;
-		for(int i=0; i<6; i++)
+	void Player::setPlayerTokens(tokenType tokenArray[], int numberOfTokens){
+        playerTokens = new tokenType[numberOfTokens];
+		for(int i=0; i<numberOfTokens; i++)
 		{
-			cout << tokenArray[i].getTokenType() << endl;
+            playerTokens[i] = tokenArray[i];
 		}
-		//playerTokens = tokenArray;
 	}
 	
-	TokenTypeVO* Player::getPlayerTokens(){
-		for(int i=0; i<6; i++)
-		{
-			cout << playerTokens[i].getTokenType() << endl;
-		}
+	tokenType* Player::getPlayerTokens(){
 		return playerTokens;
 	}
 }

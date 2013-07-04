@@ -65,7 +65,60 @@ namespace swapStratCpp {
 		
 	}
 
-
+    
+    void GameView::drawTokenType(int tokenType){
+		
+		string s;
+		
+		switch (tokenType) {
+				
+			case 1:
+				
+				s = "[T12]";
+				
+				break;
+				
+			case 2:
+				
+				s = "[T13]";
+				
+				break;
+				
+			case 3:
+				
+				s = "[T14]";
+				
+				break;
+				
+			case 4:
+				
+				s = "[T23]";
+				
+				break;
+				
+			case 5:
+				
+				s = "[T24]";
+				
+				break;
+				
+			case 6:
+				
+				s = "[T34]";
+				
+				break;
+				
+			default:
+				
+				s = "[   ]";
+				
+				break;
+				
+		}
+		
+		cout << s;
+		
+	}
 
 	void GameView::drawBoard(int* board, int WIDTH, int HEIGHT){
 		
@@ -97,7 +150,8 @@ namespace swapStratCpp {
 
 	void GameView::drawPlayerTokens(int playerTokens[], int numberOfTokens){
 		for(int i=0; i<numberOfTokens; i++){
-			cout << playerTokens[i];
+			drawTokenType(playerTokens[i]);
+            cout << ",";
 		}
 		cout << "\n";
 	}

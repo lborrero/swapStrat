@@ -22,12 +22,13 @@ namespace swapStratCpp{
 	class Player
 	{	
 		string playerName;
-		TokenTypeVO* playerTokens;
+		tokenType* playerTokens;
 	public:
 		Player();
+        ~Player();
 		
-		void setPlayerTokens(TokenTypeVO tokenArray[]);
-		TokenTypeVO* getPlayerTokens();
+		void setPlayerTokens(tokenType tokenArray[], int);
+		tokenType* getPlayerTokens();
 		
 		void setPlayerName(string);
 		string getPlayerName();

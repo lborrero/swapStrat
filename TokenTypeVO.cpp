@@ -18,6 +18,5 @@ namespace swapStratCpp {
 	TokenTypeVO::TokenTypeVO(tokenType tt)
 	{
 		_tokenType = tt;
-		std::cout << "tt: " << _tokenType << std::endl;
 	}
 }

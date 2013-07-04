@@ -27,19 +27,16 @@ namespace swapStratCpp {
 	}
 
 	void GameController::printPlayerTokens(){
-		Player p1 = gameModel.getPlayer(0);
-		Player p2 = gameModel.getPlayer(1);
-		gameView.drawPlayer(p1.getPlayerName());
-		TokenTypeVO* pp = p1.getPlayerTokens();
-		
-		int tokenList[6];
-		for(int i=0; i<6; i++)
-		{
-			tokenList[i] = pp[i].getTokenType();
-		}
-		
-		gameView.drawPlayerTokens(tokenList, 6);
-		
-		gameView.drawPlayer(p2.getPlayerName());
+        for(int j=0; j<NUMBER_OF_PLAYERS; j++){
+            Player player = gameModel.getPlayer(j);
+            gameView.drawPlayer(player.getPlayerName());
+            tokenType* tp = player.getPlayerTokens();
+            int tokenList[NUMBER_OF_TOKENS];
+            for(int i=0; i<NUMBER_OF_TOKENS; i++)
+            {
+                tokenList[i] = tp[i];
+            }
+            gameView.drawPlayerTokens(tokenList, NUMBER_OF_TOKENS);
+        }
 	}
 }

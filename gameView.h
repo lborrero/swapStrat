@@ -22,6 +22,7 @@ namespace swapStratCpp {
 	public:
 		
 		void drawSpace(int);
+        void drawTokenType(int);
 		
 		void drawBoard(int* , int, int);
 		
