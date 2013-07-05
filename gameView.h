@@ -12,6 +12,8 @@
 
 #include <iostream>
 #include <string>
+#include <sstream>
+#include <math.h>
 
 using namespace std;
 
@@ -28,6 +30,9 @@ namespace swapStratCpp {
 		
 		void drawPlayer(string);
 		void drawPlayerTokens(int playerTokens[], int);
+        
+        char charFromInt(int alphabetPos);
+        string lettersFromInt(int pos);
 	};
 	
 }

@@ -121,29 +121,37 @@ namespace swapStratCpp {
 	}
 
 	void GameView::drawBoard(int* board, int WIDTH, int HEIGHT){
-		
-		int n,m;
-		
-		for (n=0;n<HEIGHT;n++)
-			
+		int n,m, p;
+        cout << "  ";
+        for (p=0;p<HEIGHT;p++)
 		{
-			
+            cout << "  " << lettersFromInt(p) << " ";
+        }
+        cout << "\n";
+		for (n=0;n<HEIGHT;n++)
+		{
+            cout << n << " ";
 			for (m=0;m<WIDTH;m++)
-				
 			{
-				
 				drawSpace(board[n*WIDTH+m]);
-				
 			}
-			
 			cout << "\n";
-			
-		}
-		
+        }
 		cout << "\n";
-		
-	}
-
+    }
+    
+    char GameView::charFromInt(int alphabetPos){
+        char alphabet[27] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        return alphabet[alphabetPos % 26];
+    }
+    
+    string GameView::lettersFromInt(int pos){
+        stringstream output;
+        output << charFromInt(pos/26);
+        output << charFromInt(pos);
+        return output.str();
+    }
+    
 	void GameView::drawPlayer(string playerName){
 		cout << playerName << ": ";
 	}
