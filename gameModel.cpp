@@ -10,6 +10,19 @@
 #include "gameModel.h"
 
 namespace swapStratCpp {
+    
+    enum gameState{
+        INITIALIZING,
+        IN_GAME
+    };
+    
+    enum matchState{
+        PLAYER_SELECT_TOKEN,
+        PLAYER_POSITION_TOKEN,
+        VERIFING_COMBINATIONS,
+        ANIMATING_COMBINATIONS,
+        SWITCHING_PLAYER
+    };
 	
 	GameModel::GameModel(){
 		ROW = 2;
