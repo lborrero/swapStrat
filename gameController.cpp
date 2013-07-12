@@ -45,7 +45,7 @@ namespace swapStratCpp {
         do {
             havePlayerSelectAToken(gameModel.currentPlayersTurn());
             gameModel.changeToNextPlayersTurn();
-        }while (gameModel.getGameState() == GameModel::IN_GAME && gameModel.getMatchState() == GameModel::PLACING_TOKENS);
+        }while (gameModel.getGameState() == IN_GAME && gameModel.getMatchState() == PLACING_TOKENS);
     }
     
     void GameController::havePlayerSelectAToken(Player p){
@@ -54,6 +54,7 @@ namespace swapStratCpp {
         cout << "- ";
         int selectedToken;
         cin >> selectedToken;
+        gameModel.playerSelectedToken(selectedToken);
         cout << "You have selected " << selectedToken << ".\n";
     }
     

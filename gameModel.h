@@ -22,11 +22,25 @@
 //template <class T> // when forewording a template class, do we have to have the template signature fro it to be regognized as a template class?
 
 namespace swapStratCpp {
+
+    enum gameState{
+        INITIALIZING,
+        IN_GAME
+    };
+    
+    enum matchState{
+        PLACING_TOKENS,
+        MOVING_TOKENS
+    };
 	
 	class GameModel{
 	private:
 		tileSpaceVO* board;
 		Player players[NUMBER_OF_PLAYERS];
+        Player currentPlayer;
+        tokenType currentTokenBeingPlayed;
+        gameState currentGameState;
+        matchState currentMatchState;
 		
 	public:
 		int ROW, COL, TOTAL;
@@ -46,6 +60,8 @@ namespace swapStratCpp {
         int getGameState();
         int getMatchState();
         void placeTheTokenOnTheBoard(tokenType, int, int);
+        
+        void playerSelectedToken(int selectedToken);
 	};
 }
 #endif

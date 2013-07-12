@@ -10,16 +10,6 @@
 #include "gameModel.h"
 
 namespace swapStratCpp {
-    
-    enum gameState{
-        INITIALIZING,
-        IN_GAME
-    };
-    
-    enum matchState{
-        PLACING_TOKENS,
-        MOVING_TOKENS
-    };
 	
 	GameModel::GameModel(){
 		ROW = 2;
@@ -70,7 +60,7 @@ namespace swapStratCpp {
 	}
 
 	Player GameModel::getPlayer(int player){
-		return players[player];
+		return currentPlayer;
 	}
     
     void GameModel::startGame(){
@@ -92,5 +82,9 @@ namespace swapStratCpp {
     }
     
     void GameModel::placeTheTokenOnTheBoard(tokenType, int, int){
+    }
+    
+    void GameModel::playerSelectedToken(int selectedToken){
+        
     }
 }
