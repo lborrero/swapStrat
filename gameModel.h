@@ -39,6 +39,13 @@ namespace swapStratCpp {
 		tileSpaceVO* getBoard();
 		void setPlayers();
 		Player getPlayer(int);
+        
+        void startGame();
+        Player currentPlayersTurn();
+        void changeToNextPlayersTurn();
+        int getGameState();
+        int getMatchState();
+        void placeTheTokenOnTheBoard(tokenType, int, int);
 	};
 }
 #endif

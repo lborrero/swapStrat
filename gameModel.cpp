@@ -17,11 +17,8 @@ namespace swapStratCpp {
     };
     
     enum matchState{
-        PLAYER_SELECT_TOKEN,
-        PLAYER_POSITION_TOKEN,
-        VERIFING_COMBINATIONS,
-        ANIMATING_COMBINATIONS,
-        SWITCHING_PLAYER
+        PLACING_TOKENS,
+        MOVING_TOKENS
     };
 	
 	GameModel::GameModel(){
@@ -75,4 +72,25 @@ namespace swapStratCpp {
 	Player GameModel::getPlayer(int player){
 		return players[player];
 	}
+    
+    void GameModel::startGame(){
+    }
+    
+    Player GameModel::currentPlayersTurn(){
+        return players[0];
+    }
+    
+    void GameModel::changeToNextPlayersTurn(){
+    }
+    
+    int GameModel::getGameState(){
+        return 0;
+    }
+    
+    int GameModel::getMatchState(){
+        return 0;
+    }
+    
+    void GameModel::placeTheTokenOnTheBoard(tokenType, int, int){
+    }
 }

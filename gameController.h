@@ -25,6 +25,9 @@ namespace swapStratCpp {
 		void printboard();
 		void printPlayerTokens();
         int* converttokenPointersToIntArrays(tokenType * tp, int numberOfTokens);
+        void startGame();
+        void havePlayerSelectAToken(Player p);
+        void havePlayerPlaceATokenOnBoard(tokenType t);
 	};	
 }
 

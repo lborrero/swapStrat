@@ -22,6 +22,8 @@ int main(int argc, const char * argv[])
 	GameController gc;
 	gc.printboard();
 	gc.printPlayerTokens();
+    
+    gc.startGame();
 	
     return 0;
 }

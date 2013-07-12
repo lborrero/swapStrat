@@ -39,4 +39,28 @@ namespace swapStratCpp {
             gameView.drawPlayerTokens(tokenList, NUMBER_OF_TOKENS);
         }
 	}
+    
+    void GameController::startGame(){
+        gameModel.startGame();
+        do {
+            havePlayerSelectAToken(gameModel.currentPlayersTurn());
+            gameModel.changeToNextPlayersTurn();
+        }while (gameModel.getGameState() == GameModel::IN_GAME && gameModel.getMatchState() == GameModel::PLACING_TOKENS);
+    }
+    
+    void GameController::havePlayerSelectAToken(Player p){
+        cout << "\n";
+        cout << p.getPlayerName() << ", select one of your tokens.\nAvailable options: 1, 2, 3, 4, 5, 6." << "\n";
+        cout << "- ";
+        int selectedToken;
+        cin >> selectedToken;
+        cout << "You have selected " << selectedToken << ".\n";
+    }
+    
+    void GameController::havePlayerPlaceATokenOnBoard(tokenType t){
+        cout << "\n";
+//        cout << p.getPlayerName() << ", place your token on the board.\nStart with the numbers on the right side of the board, then use the letters on the top of the board.\nHave them seperated by a comma.\nIt should look something like this: 3,AC" << "\n";
+        cout << "- ";
+//        gameModel->placeTheTokenOnTheBoard(t, x, y);
+    }
 }
