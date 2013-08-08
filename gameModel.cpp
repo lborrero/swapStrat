@@ -60,7 +60,7 @@ namespace swapStratCpp {
 	}
 
 	Player GameModel::getPlayer(int player){
-		return currentPlayer;
+		return players[player];
 	}
     
     void GameModel::startGame(){
@@ -71,6 +71,7 @@ namespace swapStratCpp {
     }
     
     void GameModel::changeToNextPlayersTurn(){
+        
     }
     
     int GameModel::getGameState(){
@@ -82,9 +83,21 @@ namespace swapStratCpp {
     }
     
     void GameModel::placeTheTokenOnTheBoard(tokenType, int, int){
+        
     }
     
-    void GameModel::playerSelectedToken(int selectedToken){
-        
+    void GameModel::playerSelectedToken(tokenType selectedToken){
+        tokenType* tArray = currentPlayersTurn().getPlayerTokens();
+        currentTokenBeingPlayed = tArray[findTokenInPlayerTokens(selectedToken, currentPlayersTurn())];
+    }
+    
+    int GameModel::findTokenInPlayerTokens(tokenType t, Player p){
+        tokenType* tArray = p.getPlayerTokens();
+        for(int i=0; i<NUMBER_OF_TOKENS; i++){
+            if (t == tArray[i]) {
+                return i;
+            }
+        }
+        return -1;
     }
 }

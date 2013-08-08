@@ -61,7 +61,8 @@ namespace swapStratCpp {
         int getMatchState();
         void placeTheTokenOnTheBoard(tokenType, int, int);
         
-        void playerSelectedToken(int selectedToken);
+        void playerSelectedToken(tokenType selectedToken);
+        int findTokenInPlayerTokens(tokenType t, Player p);
 	};
 }
 #endif

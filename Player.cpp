@@ -37,4 +37,8 @@ namespace swapStratCpp {
 	tokenType* Player::getPlayerTokens(){
 		return playerTokens;
 	}
+    
+    tokenType Player::getPlayerToken(int tokenNum){
+		return playerTokens[tokenNum];
+	}
 }

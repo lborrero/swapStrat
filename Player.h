@@ -29,7 +29,8 @@ namespace swapStratCpp{
 		
 		void setPlayerTokens(tokenType tokenArray[], int);
 		tokenType* getPlayerTokens();
-		
+		tokenType getPlayerToken(int tokenNum);
+        
 		void setPlayerName(string);
 		string getPlayerName();
 	};

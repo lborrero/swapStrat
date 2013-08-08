@@ -25,7 +25,17 @@ namespace swapStratCpp {
 		
 		gameView.drawBoard(pboardInInts, gameModel.ROW, gameModel.COL);
 	}
-
+    
+    void GameController::startGame(){
+        gameModel.startGame();
+        printboard();
+        printPlayerTokens();
+        do {
+            havePlayerSelectAToken(gameModel.currentPlayersTurn());
+            gameModel.changeToNextPlayersTurn();
+        }while (gameModel.getGameState() == IN_GAME && gameModel.getMatchState() == PLACING_TOKENS);
+    }
+    
 	void GameController::printPlayerTokens(){
         for(int j=0; j<NUMBER_OF_PLAYERS; j++){
             Player player = gameModel.getPlayer(j);
@@ -39,23 +49,16 @@ namespace swapStratCpp {
             gameView.drawPlayerTokens(tokenList, NUMBER_OF_TOKENS);
         }
 	}
-    
-    void GameController::startGame(){
-        gameModel.startGame();
-        do {
-            havePlayerSelectAToken(gameModel.currentPlayersTurn());
-            gameModel.changeToNextPlayersTurn();
-        }while (gameModel.getGameState() == IN_GAME && gameModel.getMatchState() == PLACING_TOKENS);
-    }
-    
+
     void GameController::havePlayerSelectAToken(Player p){
         cout << "\n";
         cout << p.getPlayerName() << ", select one of your tokens.\nAvailable options: 1, 2, 3, 4, 5, 6." << "\n";
         cout << "- ";
-        int selectedToken;
-        cin >> selectedToken;
+        tokenType selectedToken = T12;
+//        cin >> selectedToken;
+        selectedToken--;
         gameModel.playerSelectedToken(selectedToken);
-        cout << "You have selected " << selectedToken << ".\n";
+        cout << "You have selected token: "; gameView.drawTokenType(p.getPlayerToken(selectedToken)); cout << ".\n";
     }
     
     void GameController::havePlayerPlaceATokenOnBoard(tokenType t){
