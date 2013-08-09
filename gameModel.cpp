@@ -86,7 +86,7 @@ namespace swapStratCpp {
         
     }
     
-    void GameModel::playerSelectedToken(tokenType selectedToken){
+    void GameModel::chooseCurrentPlayerSelectedToken(tokenType selectedToken){
         tokenType* tArray = currentPlayersTurn().getPlayerTokens();
         currentTokenBeingPlayed = tArray[findTokenInPlayerTokens(selectedToken, currentPlayersTurn())];
     }

@@ -1,5 +1,5 @@
 /*
- *  tokenTypeVO.h
+ *  TokenTypeUtils.h
  *  swapStratCpp
  *
  *  Created by Leonardo Borrero Luz on 13-06-22.
@@ -14,25 +14,21 @@
 namespace swapStratCpp {
 	enum tokenType{
 		none,
-		
 		T12,
-		
 		T13,
-		
 		T14,
-		
 		T23,
-		
 		T24,
-		
 		T34,	
 	};
 
-	class TokenTypeVO{
+	class TokenTypeUtils{
 	public:
+        static tokenType getTokenTypeFromString(std::string s);
+        
 		tokenType _tokenType;
-		TokenTypeVO();
-		TokenTypeVO(tokenType);
+		TokenTypeUtils();
+		TokenTypeUtils(tokenType);
 		//    teamType _teamType;
 		
 		tokenType getTokenType(){return _tokenType;};

@@ -28,6 +28,7 @@ namespace swapStratCpp {
         void startGame();
         void havePlayerSelectAToken(Player p);
         void havePlayerPlaceATokenOnBoard(tokenType t);
+        void printAPlayersTokens(Player p);
 	};	
 }
 

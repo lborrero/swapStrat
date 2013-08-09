@@ -12,7 +12,7 @@
 
 #include <iostream>
 #include <string>
-#include "TokenTypeVO.h"
+#include "TokenTypeUtils.h"
 
 using namespace std;
 

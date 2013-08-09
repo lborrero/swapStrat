@@ -163,4 +163,9 @@ namespace swapStratCpp {
 		}
 		cout << "\n";
 	}
+    
+    
+    string GameView::askUserForIntput(){
+        return " :";
+    }
 }

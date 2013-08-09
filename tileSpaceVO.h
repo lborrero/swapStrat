@@ -10,7 +10,7 @@
 #ifndef __TILE_SPACE__
 #define __TILE_SPACE__
 
-#include "tokenTypeVO.h"
+#include "TokenTypeUtils.h"
 
 namespace swapStratCpp {
 
@@ -23,7 +23,7 @@ namespace swapStratCpp {
 		tileSpaceVO();
 		
 		tileType _tileType;
-		TokenTypeVO _tokenType;
+		TokenTypeUtils _tokenType;
 		
 		tileType getTileType(){return _tileType;};
 		tokenType getTokenTypeFromTile(){return _tokenType.getTokenType();};

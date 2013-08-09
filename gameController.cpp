@@ -40,25 +40,40 @@ namespace swapStratCpp {
         for(int j=0; j<NUMBER_OF_PLAYERS; j++){
             Player player = gameModel.getPlayer(j);
             gameView.drawPlayer(player.getPlayerName());
-            tokenType* tp = player.getPlayerTokens();
-            int tokenList[NUMBER_OF_TOKENS];
-            for(int i=0; i<NUMBER_OF_TOKENS; i++)
-            {
-                tokenList[i] = tp[i];
-            }
-            gameView.drawPlayerTokens(tokenList, NUMBER_OF_TOKENS);
+            printAPlayersTokens(player);
         }
 	}
+    
+    void GameController::printAPlayersTokens(Player p){
+        tokenType* tp = p.getPlayerTokens();
+        int tokenList[NUMBER_OF_TOKENS];
+        for(int i=0; i<NUMBER_OF_TOKENS; i++)
+        {
+            tokenList[i] = tp[i];
+        }
+        gameView.drawPlayerTokens(tokenList, NUMBER_OF_TOKENS);
+    }
 
     void GameController::havePlayerSelectAToken(Player p){
         cout << "\n";
-        cout << p.getPlayerName() << ", select one of your tokens.\nAvailable options: 1, 2, 3, 4, 5, 6." << "\n";
+        cout << p.getPlayerName() << ", select one of your tokens: "; printAPlayersTokens(p);
         cout << "- ";
-        tokenType selectedToken = T12;
-//        cin >> selectedToken;
-        selectedToken--;
-        gameModel.playerSelectedToken(selectedToken);
-        cout << "You have selected token: "; gameView.drawTokenType(p.getPlayerToken(selectedToken)); cout << ".\n";
+        
+        string s;
+        bool player_has_select_a_token = false;
+        cout << "Enter a token type" << gameView.askUserForIntput();
+        while (!player_has_select_a_token){
+            cin >> s;
+            tokenType selectedToken = TokenTypeUtils::getTokenTypeFromString(s);
+            if(selectedToken == none){
+                cout << "Not a valid tokenType.\n";
+                cout << "Try again" << gameView.askUserForIntput();
+            }else{
+                cout << "You have selected token type "; gameView.drawTokenType(selectedToken); cout <<".\n";
+                gameModel.chooseCurrentPlayerSelectedToken(selectedToken);
+                player_has_select_a_token = true;
+            }
+        }
     }
     
     void GameController::havePlayerPlaceATokenOnBoard(tokenType t){

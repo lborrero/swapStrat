@@ -33,6 +33,8 @@ namespace swapStratCpp {
         
         char charFromInt(int alphabetPos);
         string lettersFromInt(int pos);
+        
+        string askUserForIntput();
 	};
 	
 }

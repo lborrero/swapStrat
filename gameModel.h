@@ -11,7 +11,7 @@
 #define __GAME_MODEL__
 
 #include "tileSpaceVO.h"
-#include "tokenTypeVO.h"
+#include "TokenTypeUtils.h"
 #include <vector>
 #include "Player.h"
 #include <sstream>
@@ -61,7 +61,7 @@ namespace swapStratCpp {
         int getMatchState();
         void placeTheTokenOnTheBoard(tokenType, int, int);
         
-        void playerSelectedToken(tokenType selectedToken);
+        void chooseCurrentPlayerSelectedToken(tokenType selectedToken);
         int findTokenInPlayerTokens(tokenType t, Player p);
 	};
 }

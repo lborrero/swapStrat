@@ -9,12 +9,12 @@
 /* Begin PBXBuildFile section */
 		259611D7177625F700CEFE0E /* gameModel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 259611D6177625F700CEFE0E /* gameModel.cpp */; };
 		259611F917763CAC00CEFE0E /* gameView.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 259611F817763CAC00CEFE0E /* gameView.cpp */; };
-		2596124217764ABC00CEFE0E /* TokenTypeVO.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2596124117764ABC00CEFE0E /* TokenTypeVO.cpp */; };
 		2596124617764B1500CEFE0E /* tileSpaceVO.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2596124517764B1500CEFE0E /* tileSpaceVO.cpp */; };
 		259612901776837E00CEFE0E /* gameController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2596128F1776837E00CEFE0E /* gameController.cpp */; };
 		2596129717769FA300CEFE0E /* Player.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2596129617769FA300CEFE0E /* Player.cpp */; };
 		8DD76F650486A84900D96B5E /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 08FB7796FE84155DC02AAC07 /* main.cpp */; settings = {ATTRIBUTES = (); }; };
 		8DD76F6A0486A84900D96B5E /* swapStratCpp.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = C6859E8B029090EE04C91782 /* swapStratCpp.1 */; };
+		B3CE61C117B53F2E00B55B76 /* TokenTypeUtils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B3CE61BF17B53F2E00B55B76 /* TokenTypeUtils.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -37,8 +37,6 @@
 		259611F717763CAC00CEFE0E /* gameView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gameView.h; sourceTree = "<group>"; };
 		259611F817763CAC00CEFE0E /* gameView.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = gameView.cpp; sourceTree = "<group>"; };
 		2596120217763FAB00CEFE0E /* gameDataTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gameDataTypes.h; sourceTree = "<group>"; };
-		2596124117764ABC00CEFE0E /* TokenTypeVO.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TokenTypeVO.cpp; sourceTree = "<group>"; };
-		2596124317764AF300CEFE0E /* TokenTypeVO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TokenTypeVO.h; sourceTree = "<group>"; };
 		2596124517764B1500CEFE0E /* tileSpaceVO.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = tileSpaceVO.cpp; sourceTree = "<group>"; };
 		2596124717764B3000CEFE0E /* tileSpaceVO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tileSpaceVO.h; sourceTree = "<group>"; };
 		2596128E1776837E00CEFE0E /* gameController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gameController.h; sourceTree = "<group>"; };
@@ -46,6 +44,8 @@
 		2596129517769FA300CEFE0E /* Player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Player.h; sourceTree = "<group>"; };
 		2596129617769FA300CEFE0E /* Player.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Player.cpp; sourceTree = "<group>"; };
 		8DD76F6C0486A84900D96B5E /* swapStratCpp */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = swapStratCpp; sourceTree = BUILT_PRODUCTS_DIR; };
+		B3CE61BF17B53F2E00B55B76 /* TokenTypeUtils.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TokenTypeUtils.cpp; sourceTree = "<group>"; };
+		B3CE61C017B53F2E00B55B76 /* TokenTypeUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TokenTypeUtils.h; sourceTree = "<group>"; };
 		C6859E8B029090EE04C91782 /* swapStratCpp.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = swapStratCpp.1; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -93,8 +93,8 @@
 		259612141776428400CEFE0E /* gameDataTypes */ = {
 			isa = PBXGroup;
 			children = (
-				2596124317764AF300CEFE0E /* TokenTypeVO.h */,
-				2596124117764ABC00CEFE0E /* TokenTypeVO.cpp */,
+				B3CE61BF17B53F2E00B55B76 /* TokenTypeUtils.cpp */,
+				B3CE61C017B53F2E00B55B76 /* TokenTypeUtils.h */,
 				2596124717764B3000CEFE0E /* tileSpaceVO.h */,
 				2596124517764B1500CEFE0E /* tileSpaceVO.cpp */,
 				2596129517769FA300CEFE0E /* Player.h */,
@@ -192,10 +192,10 @@
 				8DD76F650486A84900D96B5E /* main.cpp in Sources */,
 				259611D7177625F700CEFE0E /* gameModel.cpp in Sources */,
 				259611F917763CAC00CEFE0E /* gameView.cpp in Sources */,
-				2596124217764ABC00CEFE0E /* TokenTypeVO.cpp in Sources */,
 				2596124617764B1500CEFE0E /* tileSpaceVO.cpp in Sources */,
 				259612901776837E00CEFE0E /* gameController.cpp in Sources */,
 				2596129717769FA300CEFE0E /* Player.cpp in Sources */,
+				B3CE61C117B53F2E00B55B76 /* TokenTypeUtils.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
