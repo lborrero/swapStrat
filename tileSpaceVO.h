@@ -15,7 +15,8 @@
 namespace swapStratCpp {
 
 	enum tileType{
-		empty, occupied	
+		empty,
+        occupied,
 	};
 
 	class tileSpaceVO{

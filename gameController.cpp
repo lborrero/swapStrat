@@ -32,6 +32,7 @@ namespace swapStratCpp {
         printPlayerTokens();
         do {
             havePlayerSelectAToken(gameModel.currentPlayersTurn());
+            havePlayerPlaceATokenOnBoard();
             gameModel.changeToNextPlayersTurn();
         }while (gameModel.getGameState() == IN_GAME && gameModel.getMatchState() == PLACING_TOKENS);
     }
@@ -76,10 +77,25 @@ namespace swapStratCpp {
         }
     }
     
-    void GameController::havePlayerPlaceATokenOnBoard(tokenType t){
+    void GameController::havePlayerPlaceATokenOnBoard(){
+        Player p = gameModel.currentPlayersTurn();
         cout << "\n";
-//        cout << p.getPlayerName() << ", place your token on the board.\nStart with the numbers on the right side of the board, then use the letters on the top of the board.\nHave them seperated by a comma.\nIt should look something like this: 3,AC" << "\n";
-        cout << "- ";
-//        gameModel->placeTheTokenOnTheBoard(t, x, y);
+        cout << p.getPlayerName() << ", place your token on the board.\nStart with the numbers on the right side of the board, then use the letters on the top of the board.\nHave them seperated by a comma.\nIt should look something like this: 3,AC" << "\n";
+        cout << gameView.askUserForIntput();
+        string s;
+        bool player_has_select_a_boardSpace = false;
+        while (!player_has_select_a_boardSpace){
+            cin >> s;
+            tokenType selectedToken = TokenTypeUtils::getTokenTypeFromString(s);
+            if(selectedToken == none){
+                cout << "Not a valid tokenType.\n";
+                cout << "Try again" << gameView.askUserForIntput();
+            }else{
+                cout << "You have selected token type "; gameView.drawTokenType(selectedToken); cout <<".\n";
+                gameModel.chooseCurrentPlayerSelectedToken(selectedToken);
+//                gameModel->placeTheTokenOnTheBoard(t, x, y);
+                player_has_select_a_boardSpace = true;
+            }
+        }
     }
 }

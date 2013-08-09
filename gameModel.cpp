@@ -82,6 +82,11 @@ namespace swapStratCpp {
         return 0;
     }
     
+    tileSpaceVO GameModel::selectABoardPlaceFromString(string boardPlace){
+        //toDO
+        return tileSpaceVO();
+    }
+    
     void GameModel::placeTheTokenOnTheBoard(tokenType, int, int){
         
     }
