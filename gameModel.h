@@ -59,11 +59,15 @@ namespace swapStratCpp {
         void changeToNextPlayersTurn();
         int getGameState();
         int getMatchState();
+        tokenType getCurrentTokenBeingPlayed(){return currentTokenBeingPlayed;}
         void placeTheTokenOnTheBoard(tokenType, int, int);
         tileSpaceVO selectABoardPlaceFromString(string boardPlace);
             
         void chooseCurrentPlayerSelectedToken(tokenType selectedToken);
         int findTokenInPlayerTokens(tokenType t, Player p);
+        
+        int getBoardWidth(){return ROW;}
+        int getBoardHeight(){return COL;}
 	};
 }
 #endif

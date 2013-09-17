@@ -87,8 +87,9 @@ namespace swapStratCpp {
         return tileSpaceVO();
     }
     
-    void GameModel::placeTheTokenOnTheBoard(tokenType, int, int){
-        
+    void GameModel::placeTheTokenOnTheBoard(tokenType tt, int x, int y){
+        int boardPlacement = y*COL + x;
+        board[boardPlacement].setTokenType(tt);
     }
     
     void GameModel::chooseCurrentPlayerSelectedToken(tokenType selectedToken){

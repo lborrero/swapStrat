@@ -35,6 +35,7 @@ namespace swapStratCpp {
         string lettersFromInt(int pos);
         
         string askUserForIntput();
+        void askForPlayerToPlaceToken(string playerName);
 	};
 	
 }

@@ -164,6 +164,12 @@ namespace swapStratCpp {
 		cout << "\n";
 	}
     
+    void GameView::askForPlayerToPlaceToken(string playerName){
+        cout << "\n";
+        cout << playerName << ", place your token on the board.\nStart with the numbers on the right side of the board, then use the letters on the top of the board.\nHave them seperated by a comma.\nIt should look something like this: 3,AC" << "\n";
+        cout << askUserForIntput();
+        
+    }
     
     string GameView::askUserForIntput(){
         return " :";

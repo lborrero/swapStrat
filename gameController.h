@@ -12,6 +12,7 @@
 
 #include "gameModel.h"
 #include "gameView.h"
+#include "StringUtils.h"
 
 namespace swapStratCpp {
 
@@ -29,6 +30,9 @@ namespace swapStratCpp {
         void havePlayerSelectAToken(Player p);
         void havePlayerPlaceATokenOnBoard();
         void printAPlayersTokens(Player p);
+        
+        int xCoordFromStringToInt(string input);
+        int yCoordFromStringToInt(string input);
 	};	
 }
 

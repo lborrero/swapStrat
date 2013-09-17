@@ -24,10 +24,11 @@ namespace swapStratCpp {
 		tileSpaceVO();
 		
 		tileType _tileType;
-		TokenTypeUtils _tokenType;
+		tokenType _tokenType;
 		
-		tileType getTileType(){return _tileType;};
-		tokenType getTokenTypeFromTile(){return _tokenType.getTokenType();};
+		tileType getTileType(){return _tileType;}
+		tokenType getTokenTypeFromTile(){return _tokenType;}
+        void setTokenType(tokenType t){_tokenType = t;}
 	};
 
 }

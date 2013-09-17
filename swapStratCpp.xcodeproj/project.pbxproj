@@ -43,6 +43,7 @@
 		2596128F1776837E00CEFE0E /* gameController.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = gameController.cpp; sourceTree = "<group>"; };
 		2596129517769FA300CEFE0E /* Player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Player.h; sourceTree = "<group>"; };
 		2596129617769FA300CEFE0E /* Player.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Player.cpp; sourceTree = "<group>"; };
+		5B260C4417E909FB0016086E /* StringUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StringUtils.h; sourceTree = "<group>"; };
 		8DD76F6C0486A84900D96B5E /* swapStratCpp */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = swapStratCpp; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3CE61BF17B53F2E00B55B76 /* TokenTypeUtils.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TokenTypeUtils.cpp; sourceTree = "<group>"; };
 		B3CE61C017B53F2E00B55B76 /* TokenTypeUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TokenTypeUtils.h; sourceTree = "<group>"; };
@@ -73,6 +74,7 @@
 		08FB7795FE84155DC02AAC07 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				5B260C4217E909D80016086E /* Utils */,
 				2596128D1776835B00CEFE0E /* gameController */,
 				2596121A1776453200CEFE0E /* gameView */,
 				259612191776452600CEFE0E /* gameModel */,
@@ -129,6 +131,14 @@
 				2596128F1776837E00CEFE0E /* gameController.cpp */,
 			);
 			name = gameController;
+			sourceTree = "<group>";
+		};
+		5B260C4217E909D80016086E /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				5B260C4417E909FB0016086E /* StringUtils.h */,
+			);
+			name = Utils;
 			sourceTree = "<group>";
 		};
 		C6859E8C029090F304C91782 /* Documentation */ = {

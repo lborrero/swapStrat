@@ -12,6 +12,6 @@
 namespace swapStratCpp {
 	tileSpaceVO::tileSpaceVO(){
 		_tileType = occupied;
-		_tokenType = TokenTypeUtils();
+		_tokenType = none;
 	}
 }
