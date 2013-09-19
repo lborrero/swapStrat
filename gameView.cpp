@@ -12,112 +12,60 @@
 namespace swapStratCpp {
 
 	void GameView::drawSpace(int tileSpaceType){
-		
 		string s;
-		
 		switch (tileSpaceType) {
-				
 			case 1:
-				
 				s = "[T12]";
-				
 				break;
-				
 			case 2:
-				
 				s = "[T13]";
-				
 				break;
-				
 			case 3:
-				
 				s = "[T14]";
-				
 				break;
-				
 			case 4:
-				
 				s = "[T23]";
-				
 				break;
-				
 			case 5:
-				
 				s = "[T24]";
-				
 				break;
-				
 			case 6:
-				
 				s = "[T34]";
-				
 				break;
-				
 			default:
-				
 				s = "[   ]";
-				
 				break;
-				
 		}
-		
 		cout << s;
-		
 	}
 
     
     void GameView::drawTokenType(int tokenType){
-		
 		string s;
-		
 		switch (tokenType) {
-				
 			case 1:
-				
 				s = "[T12]";
-				
 				break;
-				
 			case 2:
-				
 				s = "[T13]";
-				
 				break;
-				
 			case 3:
-				
 				s = "[T14]";
-				
 				break;
-				
 			case 4:
-				
 				s = "[T23]";
-				
 				break;
-				
 			case 5:
-				
 				s = "[T24]";
-				
 				break;
-				
 			case 6:
-				
 				s = "[T34]";
-				
 				break;
-				
 			default:
-				
 				s = "[   ]";
-				
 				break;
-				
 		}
-		
 		cout << s;
-		
 	}
 
 	void GameView::drawBoard(int* board, int WIDTH, int HEIGHT){

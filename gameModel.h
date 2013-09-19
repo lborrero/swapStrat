@@ -38,8 +38,10 @@ namespace swapStratCpp {
 		tileSpaceVO* board;
 		Player players[NUMBER_OF_PLAYERS];
         Player currentPlayer;
+		int currentPlayerIndex;
         tokenType currentTokenBeingPlayed;
-        gameState currentGameState;
+        gameState previousGameState;
+		gameState currentGameState;
         matchState currentMatchState;
 		
 	public:
@@ -58,13 +60,15 @@ namespace swapStratCpp {
         Player currentPlayersTurn();
         void changeToNextPlayersTurn();
         int getGameState();
+		void setGameState(gameState gs);
         int getMatchState();
         tokenType getCurrentTokenBeingPlayed(){return currentTokenBeingPlayed;}
         void placeTheTokenOnTheBoard(tokenType, int, int);
         tileSpaceVO selectABoardPlaceFromString(string boardPlace);
             
         void chooseCurrentPlayerSelectedToken(tokenType selectedToken);
-        int findTokenInPlayerTokens(tokenType t, Player p);
+		void removePlayersTokenFormList(Player p, tokenType selectedToken);
+        int findTokenInPlayerTokens(Player p, tokenType t);
         
         int getBoardWidth(){return ROW;}
         int getBoardHeight(){return COL;}

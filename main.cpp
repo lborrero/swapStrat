@@ -21,6 +21,8 @@ int main(int argc, const char * argv[])
 {	
 	GameController gc;
     gc.startGame();
+	
+	cout << 1%2;
     
     return 0;
 }

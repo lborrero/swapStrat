@@ -43,10 +43,10 @@ namespace swapStratCpp {
 	tileSpaceVO* GameModel::getBoard()
 	{
 		return board;
-		
 	}
 
 	void GameModel::setPlayers(){
+		currentPlayerIndex = 0;
 		tokenType tokenTypeArray[NUMBER_OF_TOKENS] = {T12, T13, T14, T23, T24, T34};
 		for (int i=0; i<NUMBER_OF_PLAYERS; i++) 
 		{
@@ -64,18 +64,24 @@ namespace swapStratCpp {
 	}
     
     void GameModel::startGame(){
+		setGameState(IN_GAME);
     }
     
     Player GameModel::currentPlayersTurn(){
-        return players[0];
+        return players[currentPlayerIndex];
     }
     
     void GameModel::changeToNextPlayersTurn(){
-        
+        currentPlayerIndex = (currentPlayerIndex+1)%NUMBER_OF_PLAYERS;
     }
+	
+	void GameModel::setGameState(gameState gs){
+		previousGameState = currentGameState;
+		currentGameState = gs;
+	}
     
     int GameModel::getGameState(){
-        return 0;
+        return currentGameState;
     }
     
     int GameModel::getMatchState(){
@@ -94,10 +100,16 @@ namespace swapStratCpp {
     
     void GameModel::chooseCurrentPlayerSelectedToken(tokenType selectedToken){
         tokenType* tArray = currentPlayersTurn().getPlayerTokens();
-        currentTokenBeingPlayed = tArray[findTokenInPlayerTokens(selectedToken, currentPlayersTurn())];
+        currentTokenBeingPlayed = tArray[findTokenInPlayerTokens(currentPlayersTurn(), selectedToken)];
+//		removePlayersTokenFormList(currentPlayersTurn(), findTokenInPlayerTokens(selectedToken, currentPlayersTurn()));
     }
-    
-    int GameModel::findTokenInPlayerTokens(tokenType t, Player p){
+	
+	void GameModel::removePlayersTokenFormList(Player p, tokenType selectedToken){
+		tokenType* tArray = p.getPlayerTokens();
+//		findTokenInPlayerTokens(selectedToken, p);
+	}
+	
+    int GameModel::findTokenInPlayerTokens(Player p, tokenType t){
         tokenType* tArray = p.getPlayerTokens();
         for(int i=0; i<NUMBER_OF_TOKENS; i++){
             if (t == tArray[i]) {
