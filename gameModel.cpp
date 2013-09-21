@@ -50,16 +50,19 @@ namespace swapStratCpp {
 		tokenType tokenTypeArray[NUMBER_OF_TOKENS] = {T12, T13, T14, T23, T24, T34};
 		for (int i=0; i<NUMBER_OF_PLAYERS; i++) 
 		{
+			Player tempPlayer;
             stringstream name;
             name << "Player";
             name << i+1;
             
-            players[i].setPlayerName(name.str());
-			players[i].setPlayerTokens(tokenTypeArray, NUMBER_OF_TOKENS);
+            tempPlayer.setPlayerName(name.str());
+			tempPlayer.setPlayerTokens(tokenTypeArray, NUMBER_OF_TOKENS);
+			
+			players.push_back(tempPlayer);
 		}
 	}
 
-	Player GameModel::getPlayer(int player){
+	Player& GameModel::getPlayer(int player){
 		return players[player];
 	}
     
@@ -98,19 +101,12 @@ namespace swapStratCpp {
         board[boardPlacement].setTokenType(tt);
     }
     
-    void GameModel::chooseCurrentPlayerSelectedToken(tokenType selectedToken){
-        vector<tokenType> *tArray = &currentPlayersTurn().getPlayerTokens();
-        currentTokenBeingPlayed = (*tArray).at(findTokenInPlayerTokens(currentPlayersTurn(), selectedToken));
-		(*tArray).erase((*tArray).begin()+findTokenInPlayerTokens(currentPlayersTurn(), selectedToken));
+    bool GameModel::chooseCurrentPlayerSelectedToken(tokenType selectedToken){
+        currentTokenBeingPlayed = currentPlayersTurn().removeATokenFromPlayer(selectedToken);
+		if (currentTokenBeingPlayed == NULL) {
+			return false;
+		}
+		return true;
     }
 	
-    int GameModel::findTokenInPlayerTokens(Player p, tokenType t){
-        vector<tokenType> *tArray = &p.getPlayerTokens();
-        for(int i=0; i<(*tArray).size(); i++){
-            if (t == (*tArray).at(i)) {
-                return i;
-            }
-        }
-        return -1;
-    }
 }

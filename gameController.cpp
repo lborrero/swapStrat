@@ -39,13 +39,13 @@ namespace swapStratCpp {
     
 	void GameController::printPlayerTokens(){
         for(int j=0; j<NUMBER_OF_PLAYERS; j++){
-            Player player = gameModel.getPlayer(j);
-            gameView.drawPlayer(player.getPlayerName());
-            printAPlayersTokens(player);
+            Player *player = &gameModel.getPlayer(j);
+            gameView.drawPlayer((*player).getPlayerName());
+            printAPlayersTokens(*player);
         }
 	}
     
-    void GameController::printAPlayersTokens(Player p){
+    void GameController::printAPlayersTokens(Player& p){
 		vector<tokenType> *tempVect = &p.getPlayerTokens();
 		vector<int> intVector;
 		for (int i=0; i<(*tempVect).size(); i++) {
@@ -70,8 +70,7 @@ namespace swapStratCpp {
                 cout << "Try again" << gameView.askUserForIntput();
             }else{
                 cout << "You have selected token type "; gameView.drawTokenType(selectedToken); cout <<".\n";
-                gameModel.chooseCurrentPlayerSelectedToken(selectedToken);
-                player_has_select_a_token = true;
+                player_has_select_a_token = (gameModel.chooseCurrentPlayerSelectedToken(selectedToken) != none);
             }
         }
     }

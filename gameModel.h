@@ -15,6 +15,7 @@
 #include <vector>
 #include "Player.h"
 #include <sstream>
+#include <vector>
 
 #define NUMBER_OF_PLAYERS 2
 #define NUMBER_OF_TOKENS 6
@@ -36,7 +37,7 @@ namespace swapStratCpp {
 	class GameModel{
 	private:
 		tileSpaceVO* board;
-		Player players[NUMBER_OF_PLAYERS];
+		vector<Player> players;
         Player currentPlayer;
 		int currentPlayerIndex;
         tokenType currentTokenBeingPlayed;
@@ -54,7 +55,7 @@ namespace swapStratCpp {
 		void setBoardValues(int,int);
 		tileSpaceVO* getBoard();
 		void setPlayers();
-		Player getPlayer(int);
+		Player& getPlayer(int);
         
         void startGame();
         Player currentPlayersTurn();
@@ -66,9 +67,8 @@ namespace swapStratCpp {
         void placeTheTokenOnTheBoard(tokenType, int, int);
         tileSpaceVO selectABoardPlaceFromString(string boardPlace);
             
-        void chooseCurrentPlayerSelectedToken(tokenType selectedToken);
+        bool chooseCurrentPlayerSelectedToken(tokenType selectedToken);
 		void removePlayersTokenFormList(Player p, tokenType selectedToken);
-        int findTokenInPlayerTokens(Player p, tokenType t);
         
         int getBoardWidth(){return ROW;}
         int getBoardHeight(){return COL;}
