@@ -13,6 +13,7 @@
 #include "gameModel.h"
 #include "gameView.h"
 #include "StringUtils.h"
+#include <vector>
 
 namespace swapStratCpp {
 

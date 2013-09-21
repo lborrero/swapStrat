@@ -14,6 +14,7 @@
 #include <string>
 #include <sstream>
 #include <math.h>
+#include <vector>
 
 using namespace std;
 
@@ -29,7 +30,7 @@ namespace swapStratCpp {
 		void drawBoard(int* , int, int);
 		
 		void drawPlayer(string);
-		void drawPlayerTokens(int playerTokens[], int);
+		void drawPlayerTokens(vector<int>& vtt);
         
         char charFromInt(int alphabetPos);
         string lettersFromInt(int pos);

@@ -13,6 +13,7 @@
 #include <iostream>
 #include <string>
 #include "TokenTypeUtils.h"
+#include <vector>
 
 using namespace std;
 
@@ -22,13 +23,13 @@ namespace swapStratCpp{
 	class Player
 	{	
 		string playerName;
-		tokenType* playerTokens;
+		vector<tokenType> playerTokens;
 	public:
 		Player();
         ~Player();
 		
 		void setPlayerTokens(tokenType tokenArray[], int);
-		tokenType* getPlayerTokens();
+		vector<tokenType>& getPlayerTokens();
 		tokenType getPlayerToken(int tokenNum);
         
 		void setPlayerName(string);

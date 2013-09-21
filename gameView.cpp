@@ -104,9 +104,9 @@ namespace swapStratCpp {
 		cout << playerName << ": ";
 	}
 
-	void GameView::drawPlayerTokens(int playerTokens[], int numberOfTokens){
-		for(int i=0; i<numberOfTokens; i++){
-			drawTokenType(playerTokens[i]);
+	void GameView::drawPlayerTokens(vector<int>& vtt){
+		for(int i=0; i<vtt.size(); i++){
+			drawTokenType(vtt.at(i));
             cout << ",";
 		}
 		cout << "\n";

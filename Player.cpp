@@ -27,14 +27,13 @@ namespace swapStratCpp {
 	}
 	
 	void Player::setPlayerTokens(tokenType tokenArray[], int numberOfTokens){
-        playerTokens = new tokenType[numberOfTokens];
 		for(int i=0; i<numberOfTokens; i++)
 		{
-            playerTokens[i] = tokenArray[i];
+            playerTokens.push_back(tokenArray[i]);
 		}
 	}
 	
-	tokenType* Player::getPlayerTokens(){
+	vector<tokenType>& Player::getPlayerTokens(){
 		return playerTokens;
 	}
     

@@ -46,13 +46,12 @@ namespace swapStratCpp {
 	}
     
     void GameController::printAPlayersTokens(Player p){
-        tokenType* tp = p.getPlayerTokens();
-        int tokenList[NUMBER_OF_TOKENS];
-        for(int i=0; i<NUMBER_OF_TOKENS; i++)
-        {
-            tokenList[i] = tp[i];
-        }
-        gameView.drawPlayerTokens(tokenList, NUMBER_OF_TOKENS);
+		vector<tokenType> *tempVect = &p.getPlayerTokens();
+		vector<int> intVector;
+		for (int i=0; i<(*tempVect).size(); i++) {
+			intVector.push_back((*tempVect).at(i));
+		}
+        gameView.drawPlayerTokens(intVector);
     }
 
     void GameController::havePlayerSelectAToken(Player p){

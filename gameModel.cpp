@@ -89,7 +89,7 @@ namespace swapStratCpp {
     }
     
     tileSpaceVO GameModel::selectABoardPlaceFromString(string boardPlace){
-        //toDO
+        //toDO done.
         return tileSpaceVO();
     }
     
@@ -99,20 +99,15 @@ namespace swapStratCpp {
     }
     
     void GameModel::chooseCurrentPlayerSelectedToken(tokenType selectedToken){
-        tokenType* tArray = currentPlayersTurn().getPlayerTokens();
-        currentTokenBeingPlayed = tArray[findTokenInPlayerTokens(currentPlayersTurn(), selectedToken)];
-//		removePlayersTokenFormList(currentPlayersTurn(), findTokenInPlayerTokens(selectedToken, currentPlayersTurn()));
+        vector<tokenType> *tArray = &currentPlayersTurn().getPlayerTokens();
+        currentTokenBeingPlayed = (*tArray).at(findTokenInPlayerTokens(currentPlayersTurn(), selectedToken));
+		(*tArray).erase((*tArray).begin()+findTokenInPlayerTokens(currentPlayersTurn(), selectedToken));
     }
 	
-	void GameModel::removePlayersTokenFormList(Player p, tokenType selectedToken){
-		tokenType* tArray = p.getPlayerTokens();
-//		findTokenInPlayerTokens(selectedToken, p);
-	}
-	
     int GameModel::findTokenInPlayerTokens(Player p, tokenType t){
-        tokenType* tArray = p.getPlayerTokens();
-        for(int i=0; i<NUMBER_OF_TOKENS; i++){
-            if (t == tArray[i]) {
+        vector<tokenType> *tArray = &p.getPlayerTokens();
+        for(int i=0; i<(*tArray).size(); i++){
+            if (t == (*tArray).at(i)) {
                 return i;
             }
         }
