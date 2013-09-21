@@ -41,13 +41,20 @@ namespace swapStratCpp {
 		return playerTokens[tokenNum];
 	}
 	
-	tokenType Player::removeATokenFromPlayer(tokenType tt){
+	bool Player::doesPlayerHaveThisToken(tokenType tt){
 		for (int i = 0; i < playerTokens.size(); i++) {
 			if (playerTokens.at(i) == tt) {
-				playerTokens.erase(playerTokens.begin()+i);
 				return tt;
 			}
 		}
 		return none;
+	}
+	
+	void Player::removeATokenFromPlayer(tokenType tt){
+		for (int i = 0; i < playerTokens.size(); i++) {
+			if (playerTokens.at(i) == tt) {
+				playerTokens.erase(playerTokens.begin()+i);
+			}
+		}
 	}
 }

@@ -35,7 +35,8 @@ namespace swapStratCpp{
 		void setPlayerName(string);
 		string getPlayerName();
 		
-		tokenType removeATokenFromPlayer(tokenType tt);
+		bool doesPlayerHaveThisToken(tokenType tt);
+		void removeATokenFromPlayer(tokenType tt);
 	};
 }
 	

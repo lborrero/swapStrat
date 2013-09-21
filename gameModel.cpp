@@ -70,7 +70,7 @@ namespace swapStratCpp {
 		setGameState(IN_GAME);
     }
     
-    Player GameModel::currentPlayersTurn(){
+    Player& GameModel::currentPlayersTurn(){
         return players[currentPlayerIndex];
     }
     
@@ -100,13 +100,17 @@ namespace swapStratCpp {
         int boardPlacement = y*COL + x;
         board[boardPlacement].setTokenType(tt);
     }
+	
+	bool GameModel::doesCurrentPlayerHaveThisToken(tokenType tt){
+		return currentPlayersTurn().doesPlayerHaveThisToken(tt);
+	}
+	
+	void GameModel::removeThisTokenFormCurrentPlayer(tokenType tt){
+		currentPlayersTurn().removeATokenFromPlayer(tt);
+	}
     
-    bool GameModel::chooseCurrentPlayerSelectedToken(tokenType selectedToken){
-        currentTokenBeingPlayed = currentPlayersTurn().removeATokenFromPlayer(selectedToken);
-		if (currentTokenBeingPlayed == NULL) {
-			return false;
-		}
-		return true;
+    void GameModel::chooseCurrentSelectedToken(tokenType selectedToken){
+        currentTokenBeingPlayed = selectedToken;
     }
 	
 }

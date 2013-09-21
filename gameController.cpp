@@ -69,8 +69,16 @@ namespace swapStratCpp {
                 cout << "Not a valid tokenType.\n";
                 cout << "Try again" << gameView.askUserForIntput();
             }else{
-                cout << "You have selected token type "; gameView.drawTokenType(selectedToken); cout <<".\n";
-                player_has_select_a_token = (gameModel.chooseCurrentPlayerSelectedToken(selectedToken) != none);
+				if(gameModel.doesCurrentPlayerHaveThisToken(selectedToken)){
+					cout << "You have selected token type "; gameView.drawTokenType(selectedToken); cout <<".\n";
+					player_has_select_a_token = true;
+					gameModel.chooseCurrentSelectedToken(selectedToken);
+					gameModel.removeThisTokenFormCurrentPlayer(selectedToken);
+				}else{
+					cout << p.getPlayerName() << ", you do not have this token.\n";
+					cout << "Select one of these tokens: "; printAPlayersTokens(p);
+					cout << gameView.askUserForIntput();
+				}
             }
         }
     }

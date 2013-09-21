@@ -58,7 +58,7 @@ namespace swapStratCpp {
 		Player& getPlayer(int);
         
         void startGame();
-        Player currentPlayersTurn();
+        Player& currentPlayersTurn();
         void changeToNextPlayersTurn();
         int getGameState();
 		void setGameState(gameState gs);
@@ -67,8 +67,9 @@ namespace swapStratCpp {
         void placeTheTokenOnTheBoard(tokenType, int, int);
         tileSpaceVO selectABoardPlaceFromString(string boardPlace);
             
-        bool chooseCurrentPlayerSelectedToken(tokenType selectedToken);
-		void removePlayersTokenFormList(Player p, tokenType selectedToken);
+        bool doesCurrentPlayerHaveThisToken(tokenType tt);
+		void removeThisTokenFormCurrentPlayer(tokenType tt);
+		void chooseCurrentSelectedToken(tokenType selectedToken);
         
         int getBoardWidth(){return ROW;}
         int getBoardHeight(){return COL;}
