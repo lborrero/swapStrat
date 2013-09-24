@@ -31,6 +31,7 @@ namespace swapStratCpp {
         void havePlayerSelectAToken(Player p);
         void havePlayerPlaceATokenOnBoard();
         void printAPlayersTokens(Player& p);
+		void verifyBoardMatches();
         
         int xCoordFromStringToInt(string input);
         int yCoordFromStringToInt(string input);

@@ -16,7 +16,7 @@ namespace swapStratCpp {
 		COL = 2;
 		TOTAL = ROW*COL;
 		
-		board = new tileSpaceVO [TOTAL];
+		board = vector<tileSpaceVO>(TOTAL);
 	}
 
 	GameModel::GameModel(int x, int y){
@@ -24,30 +24,39 @@ namespace swapStratCpp {
 		COL = y;
 		TOTAL = ROW*COL;
 		
-		board = new tileSpaceVO [TOTAL];
+		board = vector<tileSpaceVO>(TOTAL);
 	}
 
 	GameModel::~GameModel(){
-		delete []board;
+		board.clear();
 	}
 
 	void GameModel::setBoardValues(int x, int y){
-		delete []board;
+		board.clear();
 		ROW = x;
 		COL = y;
 		TOTAL = ROW*COL;
 		
-		board = new tileSpaceVO [TOTAL];
+		board = vector<tileSpaceVO>(TOTAL);
+	}
+	
+	void GameModel::setBoardWithValueArray(int x, int y, tileSpaceVO tileArray[]){
+		board.clear();
+		ROW = x;
+		COL = y;
+		TOTAL = ROW*COL;
+		
+		board.assign(tileArray, tileArray+TOTAL);
 	}
 
-	tileSpaceVO* GameModel::getBoard()
+	vector<tileSpaceVO>& GameModel::getBoard()
 	{
 		return board;
 	}
 
 	void GameModel::setPlayers(){
 		currentPlayerIndex = 0;
-		tokenType tokenTypeArray[NUMBER_OF_TOKENS] = {T12, T13, T14, T23, T24, T34};
+		tokenType tokenTypeArray[NUMBER_OF_TOKENS] = {T12, T12, T13, T13, T14, T14};//, T23, T23, T24, T24, T34, T34};
 		for (int i=0; i<NUMBER_OF_PLAYERS; i++) 
 		{
 			Player tempPlayer;
@@ -95,10 +104,20 @@ namespace swapStratCpp {
         //toDO done.
         return tileSpaceVO();
     }
+	
+	int GameModel::boardTileIDfromCoord(int x, int y){
+		int tileId = y*COL + x;
+		if (tileId>TOTAL || tileId<0 || 
+			x < 0 || y < 0 || 
+			x > getBoardWidth() || y < getBoardHeight()) {
+			return -1;
+		}else{
+			return tileId;
+		}
+	}
     
     void GameModel::placeTheTokenOnTheBoard(tokenType tt, int x, int y){
-        int boardPlacement = y*COL + x;
-        board[boardPlacement].setTokenType(tt);
+        board[boardTileIDfromCoord(x,y)].setTokenType(tt);
     }
 	
 	bool GameModel::doesCurrentPlayerHaveThisToken(tokenType tt){
@@ -113,4 +132,48 @@ namespace swapStratCpp {
         currentTokenBeingPlayed = selectedToken;
     }
 	
+	bool GameModel::verifyMatchAtLevel(tokenType t1, tokenType t2, int level){
+	//	int arrayCompare[2][4] = {fromTokenTypeToByteArray(t1), fromTokenTypeToByteArray(t2)};
+		
+		//if(arrayCompare[0][level] == 1 && arrayCompare[1][level] == 1){
+//			return true;
+//		}else {
+//			return false;
+//		}
+		return false;
+	}
+	
+	int GameModel::fromTokenTypeToByteArray(tokenType tt, int level){
+		int possibleTokenArrays[6][4] = {
+			{1, 1, 0, 0},
+			{1, 0, 1, 0},
+			{0, 1, 1, 0},
+			{1, 0, 0, 1},
+			{0, 1, 0, 1},
+			{0, 0, 1, 1}
+		};
+		return possibleTokenArrays[tt][level-1];
+	}
+	
+	void GameModel::verifyMatches(){
+		int forLevelBoard1[TOTAL];
+		int forLevelBoard2[TOTAL];
+		int forLevelBoard3[TOTAL];
+		int forLevelBoard4[TOTAL];
+		for(int i=0; i<TOTAL; i++){
+			forLevelBoard1[i] = fromTokenTypeToByteArray(board[i].getTokenTypeFromTile(), 1);
+			forLevelBoard2[i] = fromTokenTypeToByteArray(board[i].getTokenTypeFromTile(), 2);
+			forLevelBoard3[i] = fromTokenTypeToByteArray(board[i].getTokenTypeFromTile(), 3);
+			forLevelBoard4[i] = fromTokenTypeToByteArray(board[i].getTokenTypeFromTile(), 4);
+		}
+		
+		vector<vector<int> > matchables(4);
+		
+		ContiguousBlockSearch::returnContiguousFromTile(forLevelBoard1, getBoardWidth(), 2, 3);
+	}
+	
+	void GameModel::findMatcheSequence(){
+			findMatcheSequence();
+	}
+			
 }

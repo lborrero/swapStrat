@@ -16,6 +16,7 @@
 #include "Player.h"
 #include <sstream>
 #include <vector>
+//#include "contiguousBlockSearch.h"
 
 #define NUMBER_OF_PLAYERS 2
 #define NUMBER_OF_TOKENS 6
@@ -36,7 +37,7 @@ namespace swapStratCpp {
 	
 	class GameModel{
 	private:
-		tileSpaceVO* board;
+		vector<tileSpaceVO> board;
 		vector<Player> players;
         Player currentPlayer;
 		int currentPlayerIndex;
@@ -53,7 +54,8 @@ namespace swapStratCpp {
 		~GameModel();
 		
 		void setBoardValues(int,int);
-		tileSpaceVO* getBoard();
+		void setBoardWithValueArray(int x, int y, tileSpaceVO tileArray[]);
+		vector<tileSpaceVO>& getBoard();
 		void setPlayers();
 		Player& getPlayer(int);
         
@@ -63,16 +65,21 @@ namespace swapStratCpp {
         int getGameState();
 		void setGameState(gameState gs);
         int getMatchState();
-        tokenType getCurrentTokenBeingPlayed(){return currentTokenBeingPlayed;}
+        tokenType getCurrentTokenBeingPlayed(){return currentTokenBeingPlayed;};
         void placeTheTokenOnTheBoard(tokenType, int, int);
         tileSpaceVO selectABoardPlaceFromString(string boardPlace);
-            
-        bool doesCurrentPlayerHaveThisToken(tokenType tt);
+		bool doesCurrentPlayerHaveThisToken(tokenType tt);
 		void removeThisTokenFormCurrentPlayer(tokenType tt);
 		void chooseCurrentSelectedToken(tokenType selectedToken);
-        
+		int boardTileIDfromCoord(int x, int y);
+		void findMatcheSequence();
+		
         int getBoardWidth(){return ROW;}
         int getBoardHeight(){return COL;}
+		
+        void verifyMatches();
+		bool verifyMatchAtLevel(tokenType t1, tokenType t2, int level);
+		int fromTokenTypeToByteArray(tokenType tt, int level);
 	};
 }
 #endif

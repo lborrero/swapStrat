@@ -16,11 +16,11 @@ namespace swapStratCpp {
 	}
 
 	void GameController::printboard(){
-		tileSpaceVO* pboard = gameModel.getBoard();
+		vector<tileSpaceVO> pboard = gameModel.getBoard();
 		int * pboardInInts = new int [gameModel.TOTAL];
 		for(int i=0; i<gameModel.TOTAL; i++)
 		{
-			pboardInInts[i] = static_cast<tileSpaceVO>(pboard[i]).getTokenTypeFromTile();
+			pboardInInts[i] = pboard[i].getTokenTypeFromTile();
 		}
 		
 		gameView.drawBoard(pboardInInts, gameModel.ROW, gameModel.COL);
@@ -33,9 +33,14 @@ namespace swapStratCpp {
         do {
             havePlayerSelectAToken(gameModel.currentPlayersTurn());
             havePlayerPlaceATokenOnBoard();
+			verifyBoardMatches();
             gameModel.changeToNextPlayersTurn();
         }while (gameModel.getGameState() == IN_GAME && gameModel.getMatchState() == PLACING_TOKENS);
     }
+	
+	void GameController::verifyBoardMatches(){
+		gameModel.verifyMatches();
+	}
     
 	void GameController::printPlayerTokens(){
         for(int j=0; j<NUMBER_OF_PLAYERS; j++){
