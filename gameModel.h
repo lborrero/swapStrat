@@ -45,6 +45,7 @@ namespace swapStratCpp {
         Player currentPlayer;
 		int currentPlayerIndex;
         tokenType currentTokenBeingPlayed;
+		int currentTileBeingPlayed;
         gameState previousGameState;
 		gameState currentGameState;
         matchState currentMatchState;
@@ -70,6 +71,7 @@ namespace swapStratCpp {
 		void setGameState(gameState gs);
         int getMatchState();
         tokenType getCurrentTokenBeingPlayed(){return currentTokenBeingPlayed;};
+		int getCurrentTileBeingPlayed(){return currentTileBeingPlayed;};
         void placeTheTokenOnTheBoard(tokenType, int, int);
         tileSpaceVO selectABoardPlaceFromString(string boardPlace);
 		bool doesCurrentPlayerHaveThisToken(tokenType tt);

@@ -106,18 +106,25 @@ namespace swapStratCpp {
     }
 	
 	int GameModel::boardTileIDfromCoord(int x, int y){
-		int tileId = y*COL + x;
+		int tileId = y*getBoardWidth() + x;
 		if (tileId>TOTAL || tileId<0 || 
 			x < 0 || y < 0 || 
-			x > getBoardWidth() || y < getBoardHeight()) {
+			x > getBoardWidth() || y > getBoardHeight()) {
 			return -1;
+			cout << "BREAK: - boardTileIDfromCoord";
 		}else{
 			return tileId;
 		}
 	}
     
     void GameModel::placeTheTokenOnTheBoard(tokenType tt, int x, int y){
-        board[boardTileIDfromCoord(x,y)].setTokenType(tt);
+		currentTileBeingPlayed = boardTileIDfromCoord(x,y);
+		if(currentTileBeingPlayed == -1){
+			cout << "BREAK: - placeTheTokenOnTheBoard";
+		}else{
+			board.at(boardTileIDfromCoord(x,y)).setTokenType(tt);
+		}
+		cout << "boardTileIDfromCoord: " << boardTileIDfromCoord(x,y) << " " << x << " " << y << endl;
     }
 	
 	bool GameModel::doesCurrentPlayerHaveThisToken(tokenType tt){
@@ -133,14 +140,16 @@ namespace swapStratCpp {
     }
 
 	int GameModel::fromTokenTypeToByteArray(tokenType tt, int level){
-		int possibleTokenArrays[6][4] = {
-			{1, 1, 0, 0},
-			{1, 0, 1, 0},
-			{0, 1, 1, 0},
-			{1, 0, 0, 1},
-			{0, 1, 0, 1},
-			{0, 0, 1, 1}
+		int possibleTokenArrays[7][4] = {
+			{0, 0, 0, 0},//none,
+			{1, 1, 0, 0},//T12
+			{1, 0, 1, 0},//T13
+			{1, 0, 0, 1},//T14
+			{0, 1, 1, 0},//T23
+			{0, 1, 0, 1},//T24
+			{0, 0, 1, 1} //T34
 		};
+		//cout << possibleTokenArrays[1][1] << " vs. " << possibleTokenArrays[tt][level-1] << endl;
 		return possibleTokenArrays[tt][level-1];
 	}
 	
@@ -150,22 +159,27 @@ namespace swapStratCpp {
 		int forLevelBoard3[TOTAL];
 		int forLevelBoard4[TOTAL];
 		for(int i=0; i<TOTAL; i++){
+//			cout << fromTokenTypeToByteArray(board[i].getTokenTypeFromTile(), 1) << ", "<< fromTokenTypeToByteArray(board[i].getTokenTypeFromTile(), 2) << ", "<< fromTokenTypeToByteArray(board[i].getTokenTypeFromTile(), 3) << ", "<< fromTokenTypeToByteArray(board[i].getTokenTypeFromTile(), 4) << endl;
 			forLevelBoard1[i] = fromTokenTypeToByteArray(board[i].getTokenTypeFromTile(), 1);
 			forLevelBoard2[i] = fromTokenTypeToByteArray(board[i].getTokenTypeFromTile(), 2);
 			forLevelBoard3[i] = fromTokenTypeToByteArray(board[i].getTokenTypeFromTile(), 3);
 			forLevelBoard4[i] = fromTokenTypeToByteArray(board[i].getTokenTypeFromTile(), 4);
 		}
 		
-		int intArray[]={0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-						0, 0, 0, 1, 1, 1, 0, 0, 0, 0,
-						0, 0, 0, 1, 1, 1, 0, 0, 0, 0,
-						0, 0, 0, 1, 1, 1, 1, 1, 0, 0,
-						0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
+		int xPos = ContiguousBlockSearch::indexToCoordX(getCurrentTileBeingPlayed(), getBoardWidth());
+		int yPos = ContiguousBlockSearch::indexToCoordY(getCurrentTileBeingPlayed(), getBoardWidth());
 		
 		vector<vector<int> > matchables;
 		
-		matchables.push_back(ContiguousBlockSearch::returnContiguousFromTile(intArray, getBoardWidth(), getBoardHeight(), 2, 3));
-		cout << "matchables: " << matchables.at(0).at(3) << endl;
+		matchables.push_back(ContiguousBlockSearch::returnContiguousFromTile(forLevelBoard1, getBoardWidth(), getBoardHeight(), xPos, yPos));
+		matchables.push_back(ContiguousBlockSearch::returnContiguousFromTile(forLevelBoard2, getBoardWidth(), getBoardHeight(), xPos, yPos));
+		matchables.push_back(ContiguousBlockSearch::returnContiguousFromTile(forLevelBoard3, getBoardWidth(), getBoardHeight(), xPos, yPos));
+		matchables.push_back(ContiguousBlockSearch::returnContiguousFromTile(forLevelBoard4, getBoardWidth(), getBoardHeight(), xPos, yPos));
+
+		for(int i=0; i<matchables.size(); i++){
+			cout << i << " colomnMatch: " << ContiguousBlockSearch::giveMeColomnMatchesForCoord(matchables.at(i), xPos, yPos, getBoardWidth(), getBoardHeight()).size() << endl;
+			cout << i << " rowMatch: " << ContiguousBlockSearch::giveMeRowMatchesForCoord(matchables.at(i), xPos, yPos, getBoardWidth(), getBoardHeight()).size() << endl;
+		}
 	}
 	
 	void GameModel::findMatcheSequence(){

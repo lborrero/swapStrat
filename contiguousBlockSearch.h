@@ -109,7 +109,7 @@ public:
 		return floor(coordIndex/width);
 	}
 	
-	static int giveMeRowMatchesForCoord(vector<int> &ids, int xPos, int yPos, int width, int height){
+	static vector<int> giveMeRowMatchesForCoord(vector<int> &ids, int xPos, int yPos, int width, int height){
 		vector<int> returningIds;
 		
 		int goodId = coordToIndex(xPos, yPos, width);
@@ -149,10 +149,10 @@ public:
 			}
 		}
 		
-		return returningIds.size();
+		return returningIds;
 	}
 	
-	static int giveMeColomnMatchesForCoord(vector<int> &ids, int xPos, int yPos, int width, int height){
+	static vector<int> giveMeColomnMatchesForCoord(vector<int> &ids, int xPos, int yPos, int width, int height){
 		vector<int> returningIds;
 		
 		int goodId = coordToIndex(xPos, yPos, width);
@@ -192,21 +192,21 @@ public:
 			}
 		}
 		
-		return returningIds.size();
+		return returningIds;
 	}
 	
-	static vector<int> returnContiguousFromTile(int intArray2[], int width2, int height2, int initialCoord_x2, int initialCoord_y2){
-		int width = 10;
-		int height = 5;
+	static vector<int> returnContiguousFromTile(int intArray[], int width2, int height2, int initialCoord_x2, int initialCoord_y2){
+		int width = width2;
+		int height = height2;
 		
-		int initialCoord_x = 4;
-		int initialCoord_y = 2;
+		int initialCoord_x = initialCoord_x2;
+		int initialCoord_y = initialCoord_y2;
 		
-		int intArray[]={0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-						0, 0, 0, 0, 1, 0, 0, 0, 0, 0,
-						0, 0, 1, 1, 1, 1, 1, 0, 0, 0,
-						0, 0, 0, 0, 1, 0, 0, 0, 0, 0,
-						0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
+//		int intArray[]={0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+//						0, 0, 0, 0, 1, 0, 0, 0, 0, 0,
+//						0, 0, 1, 1, 1, 1, 1, 0, 0, 0,
+//						0, 0, 0, 0, 1, 0, 0, 0, 0, 0,
+//						0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
 		
 		vector<int> giveMeIds;
 		int previousGiveMeIdsSize = giveMeIds.size();
@@ -248,8 +248,8 @@ public:
 		}
 		cout << endl;
 		
-		cout << "colomnMatch: " << giveMeColomnMatchesForCoord(giveMeIds, initialCoord_x, initialCoord_y, width, height) << endl;
-		cout << "rowMatch: " << giveMeRowMatchesForCoord(giveMeIds, initialCoord_x, initialCoord_y, width, height) << endl;
+		//cout << "colomnMatch: " << giveMeColomnMatchesForCoord(giveMeIds, initialCoord_x, initialCoord_y, width, height) << endl;
+		//cout << "rowMatch: " << giveMeRowMatchesForCoord(giveMeIds, initialCoord_x, initialCoord_y, width, height).size() << endl;
 			
 		return giveMeIds;
 	}
