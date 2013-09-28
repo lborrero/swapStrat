@@ -156,9 +156,15 @@ namespace swapStratCpp {
 			forLevelBoard4[i] = fromTokenTypeToByteArray(board[i].getTokenTypeFromTile(), 4);
 		}
 		
+		int intArray[]={0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+						0, 0, 0, 1, 1, 1, 0, 0, 0, 0,
+						0, 0, 0, 1, 1, 1, 0, 0, 0, 0,
+						0, 0, 0, 1, 1, 1, 1, 1, 0, 0,
+						0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
+		
 		vector<vector<int> > matchables;
 		
-		matchables.push_back(ContiguousBlockSearch::returnContiguousFromTile(forLevelBoard1, getBoardWidth(), getBoardHeight(), 2, 3));
+		matchables.push_back(ContiguousBlockSearch::returnContiguousFromTile(intArray, getBoardWidth(), getBoardHeight(), 2, 3));
 		cout << "matchables: " << matchables.at(0).at(3) << endl;
 	}
 	

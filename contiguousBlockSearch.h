@@ -26,8 +26,10 @@ public:
 		return false;
 	}
 	
-	static void recursiveRight(vector<int>& idCollector, int arrs[], int counter){
-		if (arrs[counter] == 0) {
+	static void recursiveRight(vector<int>& idCollector, int arrs[], int counter, int width, int height){
+		int checkerInt = (counter+1)%(width+1);
+		cout << "recursiveRight: " << checkerInt << endl;
+		if (arrs[counter] == 0 || checkerInt == 0 || counter > (width*height)-1) {
 			return;
 		}else{
 			cout << &idCollector << " ";
@@ -35,13 +37,15 @@ public:
 				idCollector.push_back(counter);
 			}
 			cout << counter << ": " << arrs[counter] << endl;
-			recursiveRight(idCollector, arrs, ++counter);
+			recursiveRight(idCollector, arrs, ++counter, width, height);
 			return;
 		}
 	}
 	
-	static void recursiveLeft(vector<int>& idCollector, int arrs[], int counter){
-		if (arrs[counter] == 0) {
+	static void recursiveLeft(vector<int>& idCollector, int arrs[], int counter, int width, int height){
+		int checkerInt = (counter+1)%(width+1);
+		cout << "recursiveLeft: " << checkerInt << endl;
+		if (arrs[counter] == 0 || checkerInt == 0) {
 			return;
 		}else{
 			cout << &idCollector << " ";
@@ -49,13 +53,14 @@ public:
 				idCollector.push_back(counter);
 			}
 			cout << counter << ": " << arrs[counter] << endl;
-			recursiveLeft(idCollector, arrs, --counter);
+			recursiveLeft(idCollector, arrs, --counter, width, height);
 			return;
 		}
 	}
 	
-	static void recursiveTop(vector<int>& idCollector, int arrs[], int counter, int width){
-		if (arrs[counter] == 0) {
+	static void recursiveTop(vector<int>& idCollector, int arrs[], int counter, int width, int height){
+		cout << "recursiveTop: " << counter << endl;
+		if (arrs[counter] == 0 || counter < 0) {
 			return;
 		}else{
 			cout << &idCollector << " ";
@@ -64,13 +69,14 @@ public:
 			}
 			cout << counter << ": " << arrs[counter] << endl;
 			counter = counter - width;
-			recursiveTop(idCollector, arrs, counter, width);
+			recursiveTop(idCollector, arrs, counter, width, height);
 			return;
 		}
 	}
 	
-	static void recursiveBottom(vector<int>& idCollector, int arrs[], int counter, int width){
-		if (arrs[counter] == 0) {
+	static void recursiveBottom(vector<int>& idCollector, int arrs[], int counter, int width, int height){
+		cout << "recursiveBottom: " << counter << endl;
+		if (arrs[counter] == 0 || counter > (width*height)-1) {
 			return;
 		}else{
 			cout << &idCollector << " ";
@@ -79,16 +85,16 @@ public:
 			}
 			cout << counter << ": " << arrs[counter] << endl;
 			counter = counter + width;
-			recursiveBottom(idCollector, arrs, counter, width);
+			recursiveBottom(idCollector, arrs, counter, width, height);
 			return;
 		}
 	}
 	
-	static void verifyTopBottomLeftAndRight(vector<int>& idCollector, int intArray[], int placement, int width){
-		recursiveRight(idCollector, intArray, placement);
-		recursiveLeft(idCollector, intArray, placement);
-		recursiveTop(idCollector, intArray, placement, width);
-		recursiveBottom(idCollector, intArray, placement, width);
+	static void verifyTopBottomLeftAndRight(vector<int>& idCollector, int intArray[], int placement, int width, int height){
+		recursiveRight(idCollector, intArray, placement, width, height);
+		recursiveLeft(idCollector, intArray, placement, width, height);
+		recursiveTop(idCollector, intArray, placement, width, height);
+		recursiveBottom(idCollector, intArray, placement, width, height);
 	}
 	
 	static int coordToIndex(int xPos, int yPos, int width){
@@ -107,26 +113,29 @@ public:
 		int width = 10;
 		int height = 5;
 		
-		int initialCoord_x = 5;
-		int initialCoord_y = 3;
+		int initialCoord_x = 4;
+		int initialCoord_y = 2;
 		
-		int intArray[] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-							0, 0, 0, 1, 1, 1, 0, 0, 0, 0,
-							0, 0, 0, 1, 1, 1, 0, 0, 0, 0,
-							0, 0, 0, 1, 1, 1, 1, 1, 0, 0,
-							0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
+		int intArray[]={1, 1, 1, 0, 0, 0, 1, 1, 1, 0,
+						0, 0, 1, 1, 0, 1, 0, 0, 1, 0,
+						0, 0, 0, 1, 1, 1, 0, 1, 1, 1,
+						0, 0, 0, 0, 0, 1, 1, 1, 0, 1,
+						0, 0, 0, 0, 0, 0, 0, 0, 1, 1};
+		
 		vector<int> giveMeIds;
 		int previousGiveMeIdsSize = giveMeIds.size();
 		cout << intArray << endl;
 		int placement = coordToIndex(initialCoord_x, initialCoord_y, width);
 		
-		verifyTopBottomLeftAndRight(giveMeIds, intArray, placement, width);
+		verifyTopBottomLeftAndRight(giveMeIds, intArray, placement, width, height);
 		
 		while(giveMeIds.size() != previousGiveMeIdsSize){
-			for (int i=giveMeIds.size()-1; i>=0; i--) {
-				verifyTopBottomLeftAndRight(giveMeIds, intArray, giveMeIds.at(i), width);
-			}
 			previousGiveMeIdsSize = giveMeIds.size();
+			for (int i=giveMeIds.size()-1; i>=0; i--) {
+				cout << "Checking id: " << giveMeIds.at(i) << "." << endl;
+				verifyTopBottomLeftAndRight(giveMeIds, intArray, giveMeIds.at(i), width, height);
+			}
+			cout << "previousGiveMeIdsSize: " << previousGiveMeIdsSize << ". " << "giveMeIds: " << giveMeIds.size() << "." << endl;
 		}
 		
 		cout << giveMeIds.size() << endl;
@@ -135,7 +144,27 @@ public:
 		
 		int colomnMatch = 0;
 		int rowMatch = 0;
-		
+		cout << endl;
+		for(int i=0; i<width*height; i++){
+		int checkerInt = (i+1)%(width);
+			bool isAmatch = false;
+			for(int j=0; j<giveMeIds.size(); j++){
+				if(i == giveMeIds.at(j)){
+					isAmatch = true;
+				}
+			}
+			if(isAmatch){
+				cout << "X";
+			}else{
+				cout << intArray[i];
+			}
+			if(checkerInt == 0){
+				cout << endl;
+			}
+			
+			
+		}
+		cout << endl;
 		for(int i=0; i<giveMeIds.size(); i++){
 			if(initialCoord_x == indexToCoordX(giveMeIds.at(i), width)){
 				colomnMatch++;
@@ -147,6 +176,8 @@ public:
 				rowMatch++;
 			}
 		}
+		
+		
 		
 		cout << "colomnMatch: " << colomnMatch << endl;
 		cout << "rowMatch: " << rowMatch << endl;
