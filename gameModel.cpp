@@ -131,18 +131,7 @@ namespace swapStratCpp {
     void GameModel::chooseCurrentSelectedToken(tokenType selectedToken){
         currentTokenBeingPlayed = selectedToken;
     }
-	
-	bool GameModel::verifyMatchAtLevel(tokenType t1, tokenType t2, int level){
-	//	int arrayCompare[2][4] = {fromTokenTypeToByteArray(t1), fromTokenTypeToByteArray(t2)};
-		
-		//if(arrayCompare[0][level] == 1 && arrayCompare[1][level] == 1){
-//			return true;
-//		}else {
-//			return false;
-//		}
-		return false;
-	}
-	
+
 	int GameModel::fromTokenTypeToByteArray(tokenType tt, int level){
 		int possibleTokenArrays[6][4] = {
 			{1, 1, 0, 0},
@@ -167,9 +156,10 @@ namespace swapStratCpp {
 			forLevelBoard4[i] = fromTokenTypeToByteArray(board[i].getTokenTypeFromTile(), 4);
 		}
 		
-		vector<vector<int> > matchables(4);
+		vector<vector<int> > matchables;
 		
-		ContiguousBlockSearch::returnContiguousFromTile(forLevelBoard1, getBoardWidth(), 2, 3);
+		matchables.push_back(ContiguousBlockSearch::returnContiguousFromTile(forLevelBoard1, getBoardWidth(), getBoardHeight(), 2, 3));
+		cout << "matchables: " << matchables.at(0).at(3) << endl;
 	}
 	
 	void GameModel::findMatcheSequence(){

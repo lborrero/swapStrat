@@ -10,22 +10,150 @@
 #ifndef __swapStratCpp__ContiguousBlockSearch__
 #define __swapStratCpp__ContiguousBlockSearch__
 
+#include <iostream>
+#include <vector>
+#include <math.h>
+
 class ContiguousBlockSearch{
 public:
-	ContiguousBlockSearch();
+	static bool verifyDouble(vector<int>& v, int valueToErase){
+		vector<int> *negativeLoop = &v;
+		for (int i=(*negativeLoop).size()-1; i>=0; i--) {
+			if((*negativeLoop).at(i) == valueToErase){
+				return true;
+			}
+		}
+		return false;
+	}
 	
-	bool verifyDouble(vector<int>& v, int valueToErase);
-	void recursiveRight(vector<int>& idCollector, int arrs[], int counter);
-	void recursiveLeft(vector<int>& idCollector, int arrs[], int counter);
-	void recursiveTop(vector<int>& idCollector, int arrs[], int counter, int width);
-	void recursiveBottom(vector<int>& idCollector, int arrs[], int counter, int width);
-	void verifyTopBottomLeftAndRight(vector<int>& idCollector, int intArray[], int placement, int width);
-	int coordToIndex(int xPos, int yPos, int width);
-	int indexToCoordX(int coordIndex, int width);
-	int indexToCoordY(int coordIndex, int width);
+	static void recursiveRight(vector<int>& idCollector, int arrs[], int counter){
+		if (arrs[counter] == 0) {
+			return;
+		}else{
+			cout << &idCollector << " ";
+			if(!verifyDouble(idCollector, counter)){
+				idCollector.push_back(counter);
+			}
+			cout << counter << ": " << arrs[counter] << endl;
+			recursiveRight(idCollector, arrs, ++counter);
+			return;
+		}
+	}
 	
-	static vector<int> returnContiguousFromTile(int, int, int, int);
-}
+	static void recursiveLeft(vector<int>& idCollector, int arrs[], int counter){
+		if (arrs[counter] == 0) {
+			return;
+		}else{
+			cout << &idCollector << " ";
+			if(!verifyDouble(idCollector, counter)){
+				idCollector.push_back(counter);
+			}
+			cout << counter << ": " << arrs[counter] << endl;
+			recursiveLeft(idCollector, arrs, --counter);
+			return;
+		}
+	}
+	
+	static void recursiveTop(vector<int>& idCollector, int arrs[], int counter, int width){
+		if (arrs[counter] == 0) {
+			return;
+		}else{
+			cout << &idCollector << " ";
+			if(!verifyDouble(idCollector, counter)){
+				idCollector.push_back(counter);
+			}
+			cout << counter << ": " << arrs[counter] << endl;
+			counter = counter - width;
+			recursiveTop(idCollector, arrs, counter, width);
+			return;
+		}
+	}
+	
+	static void recursiveBottom(vector<int>& idCollector, int arrs[], int counter, int width){
+		if (arrs[counter] == 0) {
+			return;
+		}else{
+			cout << &idCollector << " ";
+			if(!verifyDouble(idCollector, counter)){
+				idCollector.push_back(counter);
+			}
+			cout << counter << ": " << arrs[counter] << endl;
+			counter = counter + width;
+			recursiveBottom(idCollector, arrs, counter, width);
+			return;
+		}
+	}
+	
+	static void verifyTopBottomLeftAndRight(vector<int>& idCollector, int intArray[], int placement, int width){
+		recursiveRight(idCollector, intArray, placement);
+		recursiveLeft(idCollector, intArray, placement);
+		recursiveTop(idCollector, intArray, placement, width);
+		recursiveBottom(idCollector, intArray, placement, width);
+	}
+	
+	static int coordToIndex(int xPos, int yPos, int width){
+		return yPos*width+xPos;
+	}
+	
+	static int indexToCoordX(int coordIndex, int width){
+		return coordIndex%width;
+	}
+	
+	static int indexToCoordY(int coordIndex, int width){
+		return floor(coordIndex/width);
+	};
+	
+	static vector<int> returnContiguousFromTile(int intArray2[], int width2, int height2, int initialCoord_x2, int initialCoord_y2){
+		int width = 10;
+		int height = 5;
+		
+		int initialCoord_x = 5;
+		int initialCoord_y = 3;
+		
+		int intArray[] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+							0, 0, 0, 1, 1, 1, 0, 0, 0, 0,
+							0, 0, 0, 1, 1, 1, 0, 0, 0, 0,
+							0, 0, 0, 1, 1, 1, 1, 1, 0, 0,
+							0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
+		vector<int> giveMeIds;
+		int previousGiveMeIdsSize = giveMeIds.size();
+		cout << intArray << endl;
+		int placement = coordToIndex(initialCoord_x, initialCoord_y, width);
+		
+		verifyTopBottomLeftAndRight(giveMeIds, intArray, placement, width);
+		
+		while(giveMeIds.size() != previousGiveMeIdsSize){
+			for (int i=giveMeIds.size()-1; i>=0; i--) {
+				verifyTopBottomLeftAndRight(giveMeIds, intArray, giveMeIds.at(i), width);
+			}
+			previousGiveMeIdsSize = giveMeIds.size();
+		}
+		
+		cout << giveMeIds.size() << endl;
+		for (long index=0; index<(long)giveMeIds.size(); ++index) cout << giveMeIds.at(index) << " ";
+		cout << endl;
+		
+		int colomnMatch = 0;
+		int rowMatch = 0;
+		
+		for(int i=0; i<giveMeIds.size(); i++){
+			if(initialCoord_x == indexToCoordX(giveMeIds.at(i), width)){
+				colomnMatch++;
+			}
+		}
+		
+		for(int i=0; i<giveMeIds.size(); i++){
+			if(initialCoord_y == indexToCoordY(giveMeIds.at(i), width)){
+				rowMatch++;
+			}
+		}
+		
+		cout << "colomnMatch: " << colomnMatch << endl;
+		cout << "rowMatch: " << rowMatch << endl;
+			
+		return giveMeIds;
+	}
+};
 
 
 #endif /* defined(__swapStratCpp__ContiguousBlockSearch__) */

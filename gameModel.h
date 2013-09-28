@@ -16,12 +16,15 @@
 #include "Player.h"
 #include <sstream>
 #include <vector>
-//#include "contiguousBlockSearch.h"
+#include "ContiguousBlockSearch.h"
+#include "TestUtils.h"
 
 #define NUMBER_OF_PLAYERS 2
 #define NUMBER_OF_TOKENS 6
 
 //template <class T> // when forewording a template class, do we have to have the template signature fro it to be regognized as a template class?
+
+using namespace std;
 
 namespace swapStratCpp {
 
@@ -45,6 +48,7 @@ namespace swapStratCpp {
         gameState previousGameState;
 		gameState currentGameState;
         matchState currentMatchState;
+		ContiguousBlockSearch contiguousBlockSearch;
 		
 	public:
 		int ROW, COL, TOTAL;
@@ -78,7 +82,6 @@ namespace swapStratCpp {
         int getBoardHeight(){return COL;}
 		
         void verifyMatches();
-		bool verifyMatchAtLevel(tokenType t1, tokenType t2, int level);
 		int fromTokenTypeToByteArray(tokenType tt, int level);
 	};
 }
